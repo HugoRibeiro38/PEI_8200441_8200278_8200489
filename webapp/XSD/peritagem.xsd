@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:element name="peritagem">
+    <xs:complexType>
+        <xs:all>
+            <xs:element name="codigo" type="xs:positiveInteger"/>
+            <xs:element name = "PartnerID" type="IdentificationType"/>
+            <xs:element name = "PeritoID" type="IdentificationType"/>
+            <xs:element name = "Time" type="xs:time"/>
+            <xs:element name = "Entity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name ="name" type="xs:string"/>
+                        <xs:element name = "Type"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    
+</xs:element>  
+    
+    
+    <!--AlphaNumeric Restriction  -->
+    <xs:simpleType name="IdentificationType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9])*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    
+</xs:schema>
+
+
+     
