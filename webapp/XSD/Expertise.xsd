@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.NCar.pt/Expertise"
+    targetNamespace="http://www.NCar.pt/Expertise"
+    xmlns:c="http://www.NCar.pt/CommonTypes"
+    elementFormDefault="qualified">
+    
+    <xs:import schemaLocation="CommonTypes.xsd" namespace="http://www.NCar.pt/CommonTypes"/>
+    
+    
+    <xs:element name="Expertise">
+    <xs:complexType>
+        <xs:all>
+            <!-- codigo terá de ser previamente definido e positivo -->
+            <xs:element name="Code" type="xs:positiveInteger"/> 
+            <xs:element name = "PartnerID" type="c:IdentificationType"/>
+            <xs:element name = "ExpertiseID" type="c:IdentificationType"/>
+            <xs:element name = "Time" type="xs:time"/>
+            <xs:element name = "Entity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name ="name" type="xs:string"/>
+                        <xs:element name = "Type" type="c:EntityType"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+    
+</xs:element>  
+    
+    
+    
+    
+    
+    
+    
+</xs:schema>
+
+
+     
