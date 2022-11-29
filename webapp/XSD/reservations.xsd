@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://www.NCar.com/reservations.xsd"
+           targetNamespace="https://www.NCar.com/reservations.xsd"
+           xmlns:c="http://www.NCar.com/commonTypes.xsd"
+           elementFormDefault="qualified">
+
+<xs:import schemaLocation="commonTypes.xsd" namespace="http://www.NCar.com/commonTypes.xsd"></xs:import>
+
+<xs:element name="reservations">
+    <xs:complexType>
+        <xs:all>
+            <xs:element name="reservation" type="reservationType" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+</xs:element>
+
+<!-- ComplexType Reservation -->
+<xs:complexType name="reservationType">
+        <xs:all>
+            <xs:element name="code" type="c:codeType"/>
+            <xs:element name="startDate" type="c:dateType"/><!-- Atributo adicional -->
+            <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional -->
+            <xs:element name="address" type="addressType"/>
+            <xs:element name="name" type="c:identificationType"/>
+            <xs:element name = "vehicleInfo" type="infoVehicleType"/>
+        </xs:all>
+    </xs:complexType>
+    
+
+<!-- ComplexType for Address -->
+  <xs:complexType name="addressType">
+    <xs:sequence>
+        <xs:element name = "street" type="c:streetAddressType"/>
+        <xs:element name = "numDoor" type="c:numDoorType"/>
+        <xs:element name = "zipCode" type="c:zipCodeType"/>
+        <xs:element name = "city" type="c:cityType"/>
+        <xs:element name = "coordinates" type="coordinatesType" />
+    </xs:sequence>
+</xs:complexType>
+
+<!-- ComplexType for Coordinates -->
+<xs:complexType name="coordinatesType">
+        <xs:sequence>
+            <xs:element name = "latitude" type="c:latitudeType"/>
+            <xs:element name = "longitude" type="c:longitudeType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <!-- ComplexType for VehicleInfo -->
+    
+    <xs:complexType name="infoVehicleType">
+        <xs:sequence>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name = "Model" type="xs:string"/>
+            <xs:element name="Combustivel" type="c:fuelType"/>
+            <xs:element name="Transmission" type="c:gearsType"/>
+            <xs:element name="Year" type="xs:positiveInteger"/>
+            <xs:element name = "HorsePower" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+   
+</xs:schema>

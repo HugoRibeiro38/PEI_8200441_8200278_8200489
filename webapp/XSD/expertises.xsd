@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.NCar.com/expertises.xsd"
+    targetNamespace="http://www.NCar.com/expertises.xsd"
+    xmlns:c="http://www.NCar.com/commonTypes.xsd"
+    elementFormDefault="qualified">
+    
+    <xs:import schemaLocation="commonTypes.xsd" namespace="http://www.NCar.com/commonTypes.xsd"></xs:import>
+    
+
+    <!-- Conjunto de peritagens -->
+    <xs:element name="expertises">
+    <xs:complexType>
+        <xs:all>
+            <xs:element name="expertise" type="expertiseType" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+    </xs:element>
+
+    <!-- ComplexType Reservation -->
+    <xs:complexType name="expertiseType">
+        <xs:all>
+            <xs:element name="code" type="c:codeType"/>
+            <xs:element name="startDate" type="c:dateType"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name = "partnerName" type="c:identificationType"/>
+            <xs:element name = "expertiseName" type="c:identificationType"/>
+            <xs:element name = "entity">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name ="name" type="c:identificationType"/>
+                        <xs:element name = "Type" type="c:entityType"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+     
+    
+</xs:schema>
+
+
+     

@@ -1,82 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://www.NCar.pt/CommonTypes"
-    targetNamespace="http://www.NCar.pt/CommonTypes"
+    xmlns="http://www.NCar.com/commonTypes.xsd"
+    targetNamespace="http://www.NCar.com/commonTypes.xsd"
     elementFormDefault="qualified">
     
+    <!--Code Restriction  -->
+    <xs:simpleType name="codeType">
+        <xs:annotation>
+            <xs:documentation>Regras para definir o codigo da marcacao e da peritagem</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minLength value="2"></xs:minLength>
+            <xs:maxLength value="9"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>   
+
+    <!--Date Restriction  -->
+    <xs:simpleType name="dateType">
+        <xs:annotation>
+            <xs:documentation>Regras para definir a data e hora do inicio da marcaçao</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>   
+
     <!--AlphaNumeric Restriction  -->
-    <xs:simpleType name="IdentificationType">
+    <xs:simpleType name="identificationType">
+        <xs:annotation>
+            <xs:documentation>Regras para definir o nome do parceiro, do perito, nome do cliente, nome do estabelcimento</xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="([a-zA-Z0-9])*"/>
+            <xs:minLength value="2"></xs:minLength>
+            <xs:maxLength value="40"></xs:maxLength>
         </xs:restriction>
     </xs:simpleType>
     
     <!-- SimpleType com enums de Entidade -->
-    
-    <xs:simpleType name="EntityType">
+    <xs:simpleType name="entityType">
+        <xs:annotation>
+            <xs:documentation>Regras para definir o nome da entidade e o tipo</xs:documentation>
+        </xs:annotation>
         <xs:restriction base = "xs:string">
             <xs:enumeration value="Cliente"/>
             <xs:enumeration value="Oficina"/>
         </xs:restriction>
     </xs:simpleType>
     
-    <!-- ComplexType para Morada -->
+    <xs:simpleType name="descriptionType">
+        <xs:annotation>
+            <xs:documentation>Regras para definir o tipo de texto das descrições</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="400"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType> 
+
+
     
-    <xs:complexType name="AddressType">
-        <xs:sequence>
-            <xs:element name = "City" type="xs:string"/>
-            <xs:element name = "PostalCode" type="CodPostalType"/>
-            <xs:element name = "Street" type="xs:string"/>
-            <xs:element name = "NumDoor" type="xs:positiveInteger"/>
-            <xs:element name = "Coordinates" type="CoordinatesType" minOccurs="0"/>
-        </xs:sequence>
-    </xs:complexType>
+    <!-- SimpleTypes for the restrictions Morada -->
+
+    <xs:simpleType name="addressDescriptionType">
+        <xs:annotation>
+            <xs:documentation>Regras que definem a morada</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="5"></xs:minLength>
+            <xs:maxLength value="70"></xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="streetAddressType">
+        <xs:annotation>
+            <xs:documentation>Regras que definem a rua da morada</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>
     
-    
-    <!-- Simple and ComplexTypes for the restrictions Morada -->
-    
-    <xs:simpleType name="CodPostalType">
+    <xs:simpleType name="numDoorType">
+        <xs:annotation>
+            <xs:documentation>Regras que definem o numero da porta</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer"></xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="zipCodeType">
+        <xs:annotation>
+            <xs:documentation>Regras que definem o codigo-postal</xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="[0-9]{4}-[0-9]{3}"/>
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:complexType name="CoordinatesType">
-        <xs:sequence>
-            <xs:element name = "Latitude" type="LatitudeType"/>
-            <xs:element name = "Longitude" type="LongitudeType"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:simpleType name="cityType">
+        <xs:annotation>
+            <xs:documentation>Regras que definem os estados</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string"></xs:restriction>
+    </xs:simpleType>
     
-    <xs:simpleType name="LatitudeType">
+   
+    <!-- SimpleTypes for the restrictions latitude and longitude -->
+    
+    <xs:simpleType name="latitudeType">
         <xs:restriction base = "xs:decimal">
             <xs:minInclusive value="-180.0"/>
             <xs:maxInclusive value="180.0"/>
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:simpleType name="LongitudeType">
+    <xs:simpleType name="longitudeType">
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="-180"/>
             <xs:maxInclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
     
-    <!-- ComplexType and SimpleType´s for VehicleInfo -->
-    
-    <xs:complexType name="InfoVehicleType">
-        <xs:sequence>
-            <xs:element name="brand" type="xs:string"/>
-            <xs:element name = "Model" type="xs:string"/>
-            <xs:element name="Fuel" type="FuelType"/>
-            <xs:element name="Transmission" type="GearsType"/>
-            <xs:element name="Year" type="xs:positiveInteger"/>
-            <xs:element name = "HorsePower" type="xs:positiveInteger"/>
-        </xs:sequence>
-    </xs:complexType>
-    
-    
-    <xs:simpleType name="FuelType">
+
+     <!-- SimpleType´s for VehicleInfo -->
+    <xs:simpleType name="fuelType">
         <xs:restriction base ="xs:string">
             <xs:enumeration value="Diesel"/>
             <xs:enumeration value="Gasoline"/>
@@ -85,7 +129,7 @@
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:simpleType name="GearsType">
+    <xs:simpleType name="gearsType">
         <xs:restriction base = "xs:string">
             <xs:enumeration value="Auto"/>
             <xs:enumeration value="Manual"/>
