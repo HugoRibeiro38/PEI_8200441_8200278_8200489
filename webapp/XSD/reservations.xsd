@@ -24,7 +24,7 @@
             <xs:element name="address" type="addressType"/>
             <xs:element name="name" type="c:identificationType"/>
             <xs:element name = "vehicleInfo" type="infoVehicleType"/>
-            <xs:element name="TypeOfContact"/>
+            <xs:element name="TypeOfContact" type="ContactOf"/>
         </xs:all>
     </xs:complexType>
     
