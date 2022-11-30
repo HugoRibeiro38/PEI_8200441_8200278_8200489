@@ -10,8 +10,7 @@
             <xs:documentation>Regras para definir o codigo da marcacao e da peritagem</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:positiveInteger">
-            <xs:minLength value="2"></xs:minLength>
-            <xs:maxLength value="9"></xs:maxLength>
+            <xs:pattern value="\d{2,9}"/>
         </xs:restriction>
     </xs:simpleType>   
 
@@ -31,8 +30,8 @@
         </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="([a-zA-Z0-9])*"/>
-            <xs:minLength value="2"></xs:minLength>
-            <xs:maxLength value="40"></xs:maxLength>
+            <xs:minLength value="2"/>
+            <xs:maxLength value="40"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -52,7 +51,7 @@
             <xs:documentation>Regras para definir o tipo de texto das descrições</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:maxLength value="400"></xs:maxLength>
+            <xs:maxLength value="400"/>
         </xs:restriction>
     </xs:simpleType> 
 
@@ -65,8 +64,8 @@
             <xs:documentation>Regras que definem a morada</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:minLength value="5"></xs:minLength>
-            <xs:maxLength value="70"></xs:maxLength>
+            <xs:minLength value="5"/>
+            <xs:maxLength value="70"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -74,14 +73,14 @@
         <xs:annotation>
             <xs:documentation>Regras que definem a rua da morada</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:string"></xs:restriction>
+        <xs:restriction base="xs:string"/>
     </xs:simpleType>
     
     <xs:simpleType name="numDoorType">
         <xs:annotation>
             <xs:documentation>Regras que definem o numero da porta</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:integer"></xs:restriction>
+        <xs:restriction base="xs:integer"/>
     </xs:simpleType>
 
 
@@ -98,7 +97,7 @@
         <xs:annotation>
             <xs:documentation>Regras que definem os estados</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:string"></xs:restriction>
+        <xs:restriction base="xs:string"/>
     </xs:simpleType>
     
    
