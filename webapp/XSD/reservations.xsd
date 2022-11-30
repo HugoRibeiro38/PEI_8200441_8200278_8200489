@@ -24,8 +24,46 @@
             <xs:element name="address" type="addressType"/>
             <xs:element name="name" type="c:identificationType"/>
             <xs:element name = "vehicleInfo" type="infoVehicleType"/>
+            <xs:element name="TypeOfContact"/>
         </xs:all>
     </xs:complexType>
+    
+    
+    
+                   <!-- Tipo complexo para Tipo de contacto -->
+    <!-- ao instanciarmos em XML usamos ou elemento Cliente para dizer que 
+    o contacto é com o cliente dando respetiva Info e RepairShop para o caso de ser uma Oficina-->
+    
+    
+    <xs:complexType name="ContactOf">
+        <xs:choice>
+            <xs:element name="Client" type="ClientType"/>
+            <xs:element name="RepairShop" type="RepairShopType"/>
+        </xs:choice>
+    </xs:complexType>
+    
+    <!-- No caso de o contacto ser com o cliente é fornecida a respetiva Informação -->
+    <xs:complexType name="ClientType">
+        <xs:all>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="property" type="propertyType"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <!-- ComplextType para o caso de o contacto ser com a Oficina -->
+    <xs:complexType name="RepairShopType">
+        <xs:all>
+            <xs:element name="EstablishmentName" type="xs:string"/>
+        </xs:all>
+    </xs:complexType>
+    
+    <!-- SimpleType para restringir se o cliente é dono ou não do carro -->
+    <xs:simpleType name="propertyType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Owner"/>
+            <xs:enumeration value="Not Owner"/>
+        </xs:restriction>
+    </xs:simpleType>
     
 
 <!-- ComplexType for Address -->
