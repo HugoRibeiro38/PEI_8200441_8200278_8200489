@@ -28,24 +28,25 @@
             <xs:element name = "entity">
                 <xs:complexType>
                     <xs:all>
-                        <xs:element name ="name" type="c:identificationType"/>
-                        <xs:element name = "Type" type="c:entityType"/>
+                        <xs:element name ="name" type="c:identificationType"/> <!-- AlfaNumérico, não devemos alterar? -->
+                        <xs:element name="EntityType" type="c:entityType"/>
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name = "batteryStatus " type="BatteryType"></xs:element>
+            <xs:element name = "batteryStatus " type="BatteryType"/>
         </xs:all>
     </xs:complexType>
-    
+   
+   
     <!-- Battery Status -->
     <xs:complexType name="BatteryType">
         <xs:choice>
-            <xs:element name = "Conformity" type="BatteryConformityType"/>
+            <xs:element name = "Conformity" type="ConformityType"/>
             <xs:element name = "NonConformity" type="BatteryNonConformityType"/>
         </xs:choice>
     </xs:complexType>
     
-    <!-- Para o caso de não estar em conformidade -->
+    <!-- Para o caso de não estar em conformidade a Bateria -->
     <xs:simpleType name="BatteryNonConformityType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Weak"/>
@@ -56,8 +57,8 @@
         </xs:restriction>
     </xs:simpleType>
     
-    <!-- Para o caso de a bateria estar em conformidade -->
-    <xs:simpleType name="BatteryConformityType">
+    <!-- Para o caso de algo estar em conformidade no GLOBAL -->
+    <xs:simpleType name="ConformityType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Yes"/>
         </xs:restriction>
