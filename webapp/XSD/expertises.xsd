@@ -33,7 +33,7 @@
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name = "batteryStatus "></xs:element>
+            <xs:element name = "batteryStatus " type="BatteryType"></xs:element>
         </xs:all>
     </xs:complexType>
     
