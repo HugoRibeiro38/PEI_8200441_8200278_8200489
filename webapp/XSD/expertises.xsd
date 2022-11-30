@@ -33,8 +33,35 @@
                     </xs:all>
                 </xs:complexType>
             </xs:element>
+            <xs:element name = "batteryStatus "></xs:element>
         </xs:all>
     </xs:complexType>
+    
+    <!-- Battery Status -->
+    <xs:complexType name="BatteryType">
+        <xs:choice>
+            <xs:element name = "Conformity" type="BatteryConformityType"/>
+            <xs:element name = "NonConformity" type="BatteryNonConformityType"/>
+        </xs:choice>
+    </xs:complexType>
+    
+    <!-- Para o caso de não estar em conformidade -->
+    <xs:simpleType name="BatteryNonConformityType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Weak"/>
+            <xs:enumeration value="Not Working"/>
+            <xs:enumeration value="Jump Start"/>
+            <xs:enumeration value="Discharging light glowing"/>
+            <xs:enumeration value="Intermittent functioning"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Para o caso de a bateria estar em conformidade -->
+    <xs:simpleType name="BatteryConformityType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Yes"/>
+        </xs:restriction>
+    </xs:simpleType>
      
     
 </xs:schema>
