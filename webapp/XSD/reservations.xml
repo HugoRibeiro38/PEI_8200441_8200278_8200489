@@ -23,18 +23,18 @@
         
         <vehicleInfo>
             <brand>Ford</brand>
-            <Model> Fiesta</Model>
-            <Fuel></Fuel>
-            <Transmission>Manual</Transmission>
-            <Year>1998</Year>
-            <HorsePower>76</HorsePower>
+            <model> Fiesta</model>
+            <fuel></fuel>
+            <transmission>Manual</transmission>
+            <year>1998</year>
+            <horsePower>76</horsePower>
         </vehicleInfo>
-        <TypeOfContact>
-            <Client>
-                <Name>José Meireles</Name>
+        <typeOfContact>
+            <client>
+                <name>José Meireles</name>
                 <property>Owner</property>
-            </Client>
-        </TypeOfContact>
+            </client>
+        </typeOfContact>
     </reservation>
     
     <!-- Reserva COD 14 -->
@@ -56,18 +56,18 @@
         
         <vehicleInfo>
             <brand>Opel</brand>
-            <Model> Corsa</Model>
-            <Fuel>Gasoline</Fuel>
-            <Transmission>Manual</Transmission>
-            <Year>2008</Year>
-            <HorsePower>80</HorsePower>
+            <model> Corsa</model>
+            <fuel>Gasoline</fuel>
+            <transmission>Manual</transmission>
+            <year>2008</year>
+            <horsePower>80</horsePower>
         </vehicleInfo>
-        <TypeOfContact>
-            <Client>
-                <Name>Ana Ribeiro</Name>
+        <typeOfContact>
+            <client>
+                <name>Ana Ribeiro</name>
                 <property>Not Owner</property>
-            </Client>
-        </TypeOfContact>
+            </client>
+        </typeOfContact>
     </reservation>
     
       

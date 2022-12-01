@@ -24,7 +24,7 @@
             <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional -->
             <xs:element name="address" type="addressType"/>
             <xs:element name = "vehicleInfo" type="infoVehicleType"/>
-            <xs:element name="TypeOfContact" type="ContactOf"/>
+            <xs:element name="typeOfContact" type="contactOf"/>
         </xs:all>
     </xs:complexType>
     
@@ -35,25 +35,25 @@
     o contacto é com o cliente dando respetiva Info e RepairShop para o caso de ser uma Oficina-->
     
     
-    <xs:complexType name="ContactOf">
+    <xs:complexType name="contactOf">
         <xs:choice>
-            <xs:element name="Client" type="ClientType"/>
-            <xs:element name="RepairShop" type="RepairShopType"/>
+            <xs:element name="client" type="clientType"/>
+            <xs:element name="RepairShop" type="repairShopType"/>
         </xs:choice>
     </xs:complexType>
     
     <!-- No caso de o contacto ser com o cliente é fornecida a respetiva Informação -->
-    <xs:complexType name="ClientType">
+    <xs:complexType name="clientType">
         <xs:all>
-            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
             <xs:element name="property" type="propertyType"/>
         </xs:all>
     </xs:complexType>
     
     <!-- ComplextType para o caso de o contacto ser com a Oficina -->
-    <xs:complexType name="RepairShopType">
+    <xs:complexType name="repairShopType">
         <xs:all>
-            <xs:element name="EstablishmentName" type="xs:string"/>
+            <xs:element name="establishmentName" type="xs:string"/>
         </xs:all>
     </xs:complexType>
     
@@ -91,11 +91,11 @@
     <xs:complexType name="infoVehicleType">
         <xs:sequence>
             <xs:element name="brand" type="xs:string"/>
-            <xs:element name ="Model" type="xs:string"/>
-            <xs:element name="Fuel" type="c:fuelType"/>
-            <xs:element name="Transmission" type="c:gearsType"/>
-            <xs:element name="Year" type="xs:positiveInteger"/>
-            <xs:element name = "HorsePower" type="xs:positiveInteger"/>
+            <xs:element name ="model" type="xs:string"/>
+            <xs:element name="fuel" type="c:fuelType"/>
+            <xs:element name="transmission" type="c:gearsType"/>
+            <xs:element name="year" type="xs:positiveInteger"/>
+            <xs:element name = "horsePower" type="xs:positiveInteger"/>
         </xs:sequence>
     </xs:complexType>
    
