@@ -26,7 +26,7 @@
         <xs:annotation>
             <xs:documentation>Regras para definir a data e hora do inicio da marcaçao</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:dateTime"> </xs:restriction>
+        <xs:restriction base="xs:dateTime"/> 
     </xs:simpleType>
 
     <!--AlphaNumeric Restriction  -->
@@ -86,7 +86,7 @@
         <xs:annotation>
             <xs:documentation>Regras que definem o numero da porta</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:integer"/>
+        <xs:restriction base="xs:positiveInteger"/>
     </xs:simpleType>
 
 

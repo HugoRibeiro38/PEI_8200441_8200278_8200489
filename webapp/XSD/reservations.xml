@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reservations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="https://www.NCar.com/reservations.xsd"
+    xsi:SchemaLocation="reservations.xsd"
+    xmlns:c="http://www.NCar.com/commonTypes.xsd">
+    
+    <!-- Reserva COD 12 -->
+    
+    <reservation>
+        <code>12</code>
+        <startDate>2020-08-08T08:00:00</startDate>
+        <endDate>2020-08-08T12:00:00</endDate>
+        <address>
+            <street>Rua do Curral</street>
+            <numDoor>12</numDoor>
+            <zipCode>4610-156</zipCode>
+            <city>Felgueiras</city>
+            <coordinates>
+                <latitude></latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
+                <longitude></longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
+            </coordinates>
+        </address>
+        
+        <vehicleInfo>
+            <brand>Ford</brand>
+            <Model> Fiesta</Model>
+            <Fuel></Fuel>
+            <Transmission>Manual</Transmission>
+            <Year>1998</Year>
+            <HorsePower>76</HorsePower>
+        </vehicleInfo>
+        <TypeOfContact>
+            <Client>
+                <Name>José Meireles</Name>
+                <property>Owner</property>
+            </Client>
+        </TypeOfContact>
+    </reservation>
+    
+    <!-- Reserva COD 14 -->
+    
+    <reservation>
+        <code>14</code>
+        <startDate>2020-08-08T07:00:00</startDate>
+        <endDate>2020-08-08T11:00:00</endDate>
+        <address>
+            <street>Rua do Curral</street>
+            <numDoor>12</numDoor>
+            <zipCode>4615-172</zipCode>
+            <city>Lixa</city>
+            <coordinates>
+                <latitude></latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
+                <longitude></longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
+            </coordinates>
+        </address>
+        
+        <vehicleInfo>
+            <brand>Opel</brand>
+            <Model> Corsa</Model>
+            <Fuel>Gasoline</Fuel>
+            <Transmission>Manual</Transmission>
+            <Year>2008</Year>
+            <HorsePower>80</HorsePower>
+        </vehicleInfo>
+        <TypeOfContact>
+            <Client>
+                <Name>Ana Ribeiro</Name>
+                <property>Not Owner</property>
+            </Client>
+        </TypeOfContact>
+    </reservation>
+    
+      
+</reservations>
+
+
