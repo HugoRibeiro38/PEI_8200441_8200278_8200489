@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://www.NCar.com/commonTypes.xsd"
-    targetNamespace="http://www.NCar.com/commonTypes.xsd"
-    elementFormDefault="qualified">
-    
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.NCar.com/commonTypes.xsd"
+    targetNamespace="http://www.NCar.com/commonTypes.xsd" elementFormDefault="qualified">
+
+
+    <xs:annotation>
+        <xs:documentation> Nomenclatura: primeira letra do nome dos elementos a minúscula</xs:documentation>
+    </xs:annotation>
+
+    <xs:annotation>
+        <xs:documentation>Vocabulário: todo definido em inglês para uma melhor compreensão</xs:documentation>
+    </xs:annotation>
+
     <!--Code Restriction  -->
     <xs:simpleType name="codeType">
         <xs:annotation>
@@ -12,21 +19,20 @@
         <xs:restriction base="xs:positiveInteger">
             <xs:pattern value="\d{2,9}"/>
         </xs:restriction>
-    </xs:simpleType>   
+    </xs:simpleType>
 
     <!--Date Restriction  -->
     <xs:simpleType name="dateType">
         <xs:annotation>
             <xs:documentation>Regras para definir a data e hora do inicio da marcaçao</xs:documentation>
         </xs:annotation>
-        <xs:restriction base="xs:dateTime">
-        </xs:restriction>
-    </xs:simpleType>   
+        <xs:restriction base="xs:dateTime"> </xs:restriction>
+    </xs:simpleType>
 
     <!--AlphaNumeric Restriction  -->
     <xs:simpleType name="identificationType">
         <xs:annotation>
-            <xs:documentation>Regras para definir o nome do parceiro, do perito, nome do cliente, nome do estabelcimento</xs:documentation>
+            <xs:documentation>Regras para definir a identificação do parceiro e do perito</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="([a-zA-Z0-9])*"/>
@@ -34,18 +40,18 @@
             <xs:maxLength value="40"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <!-- SimpleType com enums de Entidade -->
     <xs:simpleType name="entityType">
         <xs:annotation>
-            <xs:documentation>Regras para definir o nome da entidade e o tipo</xs:documentation>
+            <xs:documentation>Regras para definir o tipo de entidade</xs:documentation>
         </xs:annotation>
-        <xs:restriction base = "xs:string">
-            <xs:enumeration value="Cliente"/>
-            <xs:enumeration value="Oficina"/>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Customer"/>
+            <xs:enumeration value="RepairShop"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="descriptionType">
         <xs:annotation>
             <xs:documentation>Regras para definir o tipo de texto das descrições</xs:documentation>
@@ -53,10 +59,10 @@
         <xs:restriction base="xs:string">
             <xs:maxLength value="400"/>
         </xs:restriction>
-    </xs:simpleType> 
+    </xs:simpleType>
 
 
-    
+
     <!-- SimpleTypes for the restrictions Morada -->
 
     <xs:simpleType name="addressDescriptionType">
@@ -75,7 +81,7 @@
         </xs:annotation>
         <xs:restriction base="xs:string"/>
     </xs:simpleType>
-    
+
     <xs:simpleType name="numDoorType">
         <xs:annotation>
             <xs:documentation>Regras que definem o numero da porta</xs:documentation>
@@ -92,48 +98,60 @@
             <xs:pattern value="[0-9]{4}-[0-9]{3}"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="cityType">
         <xs:annotation>
             <xs:documentation>Regras que definem os estados</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string"/>
     </xs:simpleType>
-    
-   
+
+
     <!-- SimpleTypes for the restrictions latitude and longitude -->
-    
+
     <xs:simpleType name="latitudeType">
-        <xs:restriction base = "xs:decimal">
+        <xs:annotation>
+            <xs:documentation> Regras que definem os valores limite para latitude</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:decimal">
             <xs:minInclusive value="-180.0"/>
             <xs:maxInclusive value="180.0"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="longitudeType">
+        <xs:annotation>
+            <xs:documentation> Regras que definem os valores limite para a longitude</xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="-180"/>
             <xs:maxInclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
-    
 
-     <!-- SimpleType´s for VehicleInfo -->
+
+    <!-- SimpleType´s for VehicleInfo -->
     <xs:simpleType name="fuelType">
-        <xs:restriction base ="xs:string">
+        <xs:annotation>
+            <xs:documentation>Regras que definem os "values" ou tipos de combustivel aceites </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
             <xs:enumeration value="Diesel"/>
             <xs:enumeration value="Gasoline"/>
             <xs:enumeration value="Eletric or Gasoline"/>
             <xs:enumeration value="Eletric"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="gearsType">
-        <xs:restriction base = "xs:string">
+        <xs:annotation>
+            <xs:documentation> Regras que definem os tipos aceites para o Tipo de Caixa</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
             <xs:enumeration value="Auto"/>
             <xs:enumeration value="Manual"/>
         </xs:restriction>
     </xs:simpleType>
-   
- 
+
+
 </xs:schema>
