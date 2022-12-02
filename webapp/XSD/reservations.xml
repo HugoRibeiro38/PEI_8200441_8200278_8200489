@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reservations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns="https://www.NCar.com/reservations.xsd"
-    xsi:SchemaLocation="reservations.xsd"
+    xsi:SchemaLocation="https://www.NCar.com/reservations.xsd reservations.xsd"
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
     
     <!-- Reserva COD 12 -->
