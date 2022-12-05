@@ -15,10 +15,8 @@
             <numDoor>12</numDoor>
             <zipCode>4610-156</zipCode>
             <city>Felgueiras</city>
-            <coordinates>
-                <latitude>23.4</latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
-                <longitude>25</longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
-            </coordinates>
+            <coordinates></coordinates> <!-- caso não seja possível fornecer coordenadas basta apenas
+            não chamar elemento coordinates ou chamar e não chamar latitude e longitude-->
         </address>
         
         <vehicleInfo>
