@@ -10,22 +10,22 @@
 
 <xs:element name="reservations">
     <xs:complexType>
-        <xs:all>
-            <xs:element name="reservation" type="reservationType" minOccurs="1"/>
-        </xs:all>
+        <xs:sequence>
+            <xs:element name="reservation" type="reservationType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
 </xs:element>
 
 <!-- ComplexType Reservation -->
 <xs:complexType name="reservationType">
-        <xs:all>
-            <xs:element name="code" type="c:codeType"/>
-            <xs:element name="startDate" type="c:dateType"/><!-- Atributo adicional -->
-            <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional -->
-            <xs:element name="address" type="addressType"/>
-            <xs:element name = "vehicleInfo" type="infoVehicleType"/>
-            <xs:element name="typeOfContact" type="contactOf"/>
-        </xs:all>
+        <xs:sequence>
+            <xs:element name="code" type="c:codeType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="startDate" type="c:dateType" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
+            <xs:element name="endDate" type="c:dateType" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
+            <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "vehicleInfo" type="infoVehicleType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="typeOfContact" type="contactOf" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
     </xs:complexType>
     
     
@@ -45,15 +45,15 @@
     <!-- No caso de o contacto ser com o cliente é fornecida a respetiva Informação -->
     <xs:complexType name="clientType">
         <xs:all>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="property" type="propertyType"/>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="property" type="propertyType" minOccurs="1" maxOccurs="1"/>
         </xs:all>
     </xs:complexType>
     
     <!-- ComplextType para o caso de o contacto ser com a Oficina -->
     <xs:complexType name="repairShopType">
         <xs:all>
-            <xs:element name="establishmentName" type="xs:string"/>
+            <xs:element name="establishmentName" type="xs:string" minOccurs="1" maxOccurs="1"/>
         </xs:all>
     </xs:complexType>
     
@@ -69,19 +69,19 @@
 <!-- ComplexType for Address -->
   <xs:complexType name="addressType">
     <xs:sequence>
-        <xs:element name = "street" type="c:streetAddressType"/>
-        <xs:element name = "numDoor" type="c:numDoorType"/>
-        <xs:element name = "zipCode" type="c:zipCodeType"/>
-        <xs:element name = "city" type="c:cityType"/>
-        <xs:element name = "coordinates" type="coordinatesType" />
+        <xs:element name = "street" type="c:streetAddressType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name = "numDoor" type="c:numDoorType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name = "zipCode" type="c:zipCodeType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name = "city" type="c:cityType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name = "coordinates" type="coordinatesType" minOccurs="0"/>
     </xs:sequence>
 </xs:complexType>
 
 <!-- ComplexType for Coordinates -->
 <xs:complexType name="coordinatesType">
         <xs:sequence>
-            <xs:element name = "latitude" type="c:latitudeType"/>
-            <xs:element name = "longitude" type="c:longitudeType"/>
+            <xs:element name = "latitude" type="c:latitudeType" minOccurs="0"/>
+            <xs:element name = "longitude" type="c:longitudeType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -90,12 +90,12 @@
     
     <xs:complexType name="infoVehicleType">
         <xs:sequence>
-            <xs:element name="brand" type="xs:string"/>
-            <xs:element name ="model" type="xs:string"/>
-            <xs:element name="fuel" type="c:fuelType"/>
-            <xs:element name="transmission" type="c:gearsType"/>
-            <xs:element name="year" type="xs:positiveInteger"/>
-            <xs:element name = "horsePower" type="xs:positiveInteger"/>
+            <xs:element name="brand" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name ="model" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="fuel" type="c:fuelType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="transmission" type="c:gearsType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="year" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "horsePower" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
    

@@ -11,45 +11,73 @@
     <!-- Conjunto de peritagens -->
     <xs:element name="expertises">
     <xs:complexType>
-        <xs:all>
-            <xs:element name="expertise" type="expertiseType" minOccurs="1"/>
-        </xs:all>
+        <xs:sequence>
+            <xs:element name="expertise" type="expertiseType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
     </xs:element>
 
     <!-- ComplexType expertises -->
     <xs:complexType name="expertiseType">
-        <xs:all>
-            <xs:element name="code" type="c:codeType"/>
-            <xs:element name="startDate" type="c:dateType"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
-            <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
-            <xs:element name = "partnerName" type="c:identificationType"/>
-            <xs:element name = "expertiseName" type="c:identificationType"/>
-            <xs:element name = "status" type="c:yesNoEnumType"/>
-            <xs:element name = "entity">
+        <xs:sequence>
+            <xs:element name="code" type="c:codeType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="startDate" type="c:dateType" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="endDate" type="c:dateType" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name = "partnerName" type="c:identificationType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "expertiseName" type="c:identificationType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "status" type="statusType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "entity" minOccurs="1" maxOccurs="1">
                 <xs:complexType>
                     <xs:all>
-                        <xs:element name ="name" type="c:identificationType"/> <!-- AlfaNumérico, não devemos alterar? -->
-                        <xs:element name="EntityType" type="c:entityType"/>
+                        <xs:element name ="name" type="c:identificationType" minOccurs="1" maxOccurs="1"/> <!-- AlfaNumérico, não devemos alterar? -->
+                        <xs:element name="EntityType" type="c:entityType" minOccurs="1" maxOccurs="1"/>
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name = "batteryStatus" type="batteryType"/>
-            <xs:element name = "oilLevel" type="oilLevelType"/> 
-            <xs:element name = "engineTransmission" type="engineTransmissionType"/>
-            <xs:element name = "refrigerationSystem" type="refrigerationSystemType"/>
-            <xs:element name = "motorSupport" type="motorSupportType"/>
-            <xs:element name = "engineSound" type="engineSoundType"/>
-            <xs:element name = "gases" type="gasesType"/>
-            <xs:element name = "gearBox" type="gearBoxType"/>
-            <xs:element name = "kms" type="xs:positiveInteger"/>
-        </xs:all>
+            <xs:element name = "batteryStatus" type="batteryType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "oilLevel" type="oilLevelType" minOccurs="1" maxOccurs="1"/> 
+            <xs:element name = "engineTransmission" type="engineTransmissionType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "refrigerationSystem" type="refrigerationSystemType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "motorSupport" type="motorSupportType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "engineSound" type="engineSoundType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "gases" type="gasesType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "gearBox" type="gearBoxType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "kms" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
     </xs:complexType>
+    
+    <!-- ComplexType para status -->
+    <!-- caso seja realizada escolhemos o elemento "realised" que por defeito tem o valor "yes" -->
+    <!-- caso não seja realizada, utiliza um tipo complexo que tem 3 elementos possíveis a catalogar -->
+    <!-- elementos esses vão ser assinalados com um "X" por defeito quando chamamos o elemento -->
+    
+    <xs:annotation>
+        <xs:documentation>Regras para definição elemento "status"/estado</xs:documentation>
+    </xs:annotation>
+    
+    <xs:complexType name="statusType">
+        <xs:choice>
+            <xs:element name="realised" fixed="yes"/>
+            <xs:element name="notRealised" type="notRealisedType"/>
+        </xs:choice>
+    </xs:complexType>
+    
+    <!-- Caso seja catalogado com "Other" utiliza o simpleType "descriptionType" para definir
+    uma descrição no máximo de 400 caracteres-->
+    
+    <xs:complexType name="notRealisedType">
+        <xs:choice>
+            <xs:element name="inaccessibleLocation" fixed="X"/>
+            <xs:element name="missingVehicle" fixed="X"/>
+            <xs:element name="Other" type="c:descriptionType"/>
+        </xs:choice>
+    </xs:complexType>
+   
 
 
     <xs:complexType name="batteryType">
         <xs:choice>
-            <xs:element name="batteryStatus" >
+            <xs:element name="batteryStatus">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Weak"/>

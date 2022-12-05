@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reservations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns="https://www.NCar.com/reservations.xsd"
-    xsi:SchemaLocation="https://www.NCar.com/reservations.xsd reservations.xsd"
+    xsi:schemaLocation="https://www.NCar.com/reservations.xsd reservations.xsd"
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
     
     <!-- Reserva COD 12 -->
@@ -16,15 +16,15 @@
             <zipCode>4610-156</zipCode>
             <city>Felgueiras</city>
             <coordinates>
-                <latitude></latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
-                <longitude></longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
+                <latitude>23.4</latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
+                <longitude>25</longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
             </coordinates>
         </address>
         
         <vehicleInfo>
             <brand>Ford</brand>
-            <model> Fiesta</model>
-            <fuel></fuel>
+            <model>Fiesta</model>
+            <fuel>Diesel</fuel>
             <transmission>Manual</transmission>
             <year>1998</year>
             <horsePower>76</horsePower>
@@ -37,8 +37,6 @@
         </typeOfContact>
     </reservation>
     
-    <!-- Reserva COD 14 -->
-    
     <reservation>
         <code>14</code>
         <startDate>2020-08-08T07:00:00</startDate>
@@ -49,14 +47,14 @@
             <zipCode>4615-172</zipCode>
             <city>Lixa</city>
             <coordinates>
-                <latitude></latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
-                <longitude></longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
+                <latitude>23.4</latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
+                <longitude>35</longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
             </coordinates>
         </address>
         
         <vehicleInfo>
             <brand>Opel</brand>
-            <model> Corsa</model>
+            <model>Corsa</model>
             <fuel>Gasoline</fuel>
             <transmission>Manual</transmission>
             <year>2008</year>

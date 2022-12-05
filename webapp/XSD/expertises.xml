@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expertises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.NCar.com/expertises.xsd"
+    xsi:schemaLocation="http://www.NCar.com/expertises.xsd expertises.xsd"
+    xmlns:c="http://www.NCar.com/commonTypes.xsd">
+    
+    <expertise>
+        <code>22</code>
+        <startDate>2020-08-08T07:00:00</startDate>
+        <endDate>2020-08-08T11:00:00</endDate>
+        <partnerName>A2A3</partnerName>
+        <expertiseName>A4S5</expertiseName>
+        <status>
+           <notRealised>
+               <Other>Motivos ainda não apurados</Other>
+           </notRealised>
+        </status>
+        
+        <entity>
+            <name>Bruno</name>
+            <EntityType>Customer</EntityType>
+        </entity>
+        
+        <batteryStatus>
+            <batteryStatus>Weak</batteryStatus>
+        </batteryStatus>
+        
+        <oilLevel>
+            <oilLevel>Dirty</oilLevel>
+        </oilLevel>
+        
+        <engineTransmission>
+            <conformidade>yes</conformidade>
+        </engineTransmission>
+        
+        <refrigerationSystem>
+            <conformidade>yes</conformidade>
+        </refrigerationSystem>
+        
+        <motorSupport>
+            <motorSupportType>Broken</motorSupportType>
+        </motorSupport>
+        
+        <engineSound>
+            <conformidade>yes</conformidade>
+        </engineSound>
+        
+        <gases>
+            <gases>Blue</gases>
+        </gases>
+        
+        <gearBox>
+            <batteryStatus>Spongy</batteryStatus>
+        </gearBox>
+        
+        <kms>123000</kms>
+    </expertise>
+    
+    
+
+
+
+</expertises>
