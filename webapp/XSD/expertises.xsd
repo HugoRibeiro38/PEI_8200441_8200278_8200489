@@ -12,12 +12,12 @@
     <xs:element name="expertises">
     <xs:complexType>
         <xs:all>
-            <xs:element name="expertise" type="expertiseType" minOccurs="0"/>
+            <xs:element name="expertise" type="expertiseType" minOccurs="1"/>
         </xs:all>
     </xs:complexType>
     </xs:element>
 
-    <!-- ComplexType Reservation -->
+    <!-- ComplexType expertises -->
     <xs:complexType name="expertiseType">
         <xs:all>
             <xs:element name="code" type="c:codeType"/>
@@ -25,6 +25,7 @@
             <xs:element name="endDate" type="c:dateType"/><!-- Atributo adicional do dia, a hora e min são obrigatorios -->
             <xs:element name = "partnerName" type="c:identificationType"/>
             <xs:element name = "expertiseName" type="c:identificationType"/>
+            <xs:element name = "status" type="c:yesNoEnumType"/>
             <xs:element name = "entity">
                 <xs:complexType>
                     <xs:all>
@@ -33,38 +34,179 @@
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name = "batteryStatus " type="BatteryType"/>
+            <xs:element name = "batteryStatus" type="batteryType"/>
+            <xs:element name = "oilLevel" type="oilLevelType"/> 
+            <xs:element name = "engineTransmission" type="engineTransmissionType"/>
+            <xs:element name = "refrigerationSystem" type="refrigerationSystemType"/>
+            <xs:element name = "motorSupport" type="motorSupportType"/>
+            <xs:element name = "engineSound" type="engineSoundType"/>
+            <xs:element name = "gases" type="gasesType"/>
+            <xs:element name = "gearBox" type="gearBoxType"/>
+            <xs:element name = "kms" type="xs:positiveInteger"/>
         </xs:all>
     </xs:complexType>
-   
-   
-    <!-- Battery Status -->
-    <xs:complexType name="BatteryType">
+
+
+    <xs:complexType name="batteryType">
         <xs:choice>
-            <xs:element name = "Conformity" type="ConformityType"/>
-            <xs:element name = "NonConformity" type="BatteryNonConformityType"/>
-        </xs:choice>
+            <xs:element name="batteryStatus" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Weak"/>
+                        <xs:enumeration value="Not Working"/>
+                        <xs:enumeration value="Jump Start"/>
+                        <xs:enumeration value="Discharging light glowing"/>
+                        <xs:enumeration value="Intermittent functioning"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+    <xs:complexType name="oilLevelType">
+        <xs:choice>
+            <xs:element name="oilLevel" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Dirty"/>
+                        <xs:enumeration value="Leakage from Side cover"/>
+                        <xs:enumeration value="Leakage from Sump/chambe"/>
+                        <xs:enumeration value="Leakage from Tappet Cover"/>
+                        <xs:enumeration value="Leakage from Turbo Charger"/>
+                        <xs:enumeration value="Leaking"/>
+                        <xs:enumeration value="Level Low"/>
+                        <xs:enumeration value="Low Pressure warning light glowing"/>
+                        <xs:enumeration value="Mixed with Coolantg"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+    <xs:complexType name="engineTransmissionType">
+        <xs:choice>
+            <xs:element name="engineTransmission" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Car not working on Petrol"/>
+                        <xs:enumeration value="Fuel Leakage From Injector"/>
+                        <xs:enumeration value="MIL light glowing"/>
+                        <xs:enumeration value="Misfiring "/>
+                        <xs:enumeration value="Not converting to CNG"/>
+                        <xs:enumeration value="Over heating"/>
+                        <xs:enumeration value="RPM fluctuating "/>
+                        <xs:enumeration value="RPM not increasing"/>
+                        <xs:enumeration value="Repaired"/>
+                        <xs:enumeration value="Seized"/>
+                        <xs:enumeration value="Sump Damaged"/>
+                        <xs:enumeration value="Turbo charger not working"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+  
+    
+    <xs:complexType name="refrigerationSystemType">
+        <xs:choice>
+            <xs:element name="refrigerationSystem" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Dirty"/>
+                        <xs:enumeration value="Leaking”"/>
+                        <xs:enumeration value="Mixed with Engine Oil"/>
+                        <xs:enumeration value="Radiator Damaged"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+    <xs:complexType name="motorSupportType">
+        <xs:choice>
+            <xs:element name="motorSupportType" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Broken"/>
+                        <xs:enumeration value="Excess Vibration"/>
+                        <xs:enumeration value="Loose"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+    <xs:complexType name="engineSoundType">
+        <xs:choice>
+            <xs:element name="engineSound" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Alternator Brg Noise"/>
+                        <xs:enumeration value="Engine Auxiliary Noise"/>
+                        <xs:enumeration value="Injector Noise"/>
+                        <xs:enumeration value="Tappet Noise"/>
+                        <xs:enumeration value="Timing Noise"/>
+                        <xs:enumeration value="Water Pump BrgNoise"/>
+                        <xs:enumeration value="Whistling Noise-Turbo"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+    <xs:complexType name="gasesType">
+        <xs:choice>
+            <xs:element name="gases" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Black"/>
+                        <xs:enumeration value="Blue"/>
+                        <xs:enumeration value="Leakage from manifold"/>
+                        <xs:enumeration value="Noise from silencer assembly"/>
+                        <xs:enumeration value="Silencer assembly damaged"/>
+                        <xs:enumeration value="White"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
     </xs:complexType>
     
-    <!-- Para o caso de não estar em conformidade a Bateria -->
-    <xs:simpleType name="BatteryNonConformityType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Weak"/>
-            <xs:enumeration value="Not Working"/>
-            <xs:enumeration value="Jump Start"/>
-            <xs:enumeration value="Discharging light glowing"/>
-            <xs:enumeration value="Intermittent functioning"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <!-- Para o caso de algo estar em conformidade no GLOBAL -->
-    <xs:simpleType name="ConformityType">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="Yes"/>
-        </xs:restriction>
-    </xs:simpleType>
-     
-    
+    <xs:complexType name="gearBoxType">
+        <xs:choice>
+            <xs:element name="batteryStatus" >
+                <xs:simpleType >
+                    <xs:restriction base = "xs:string">
+                        <xs:enumeration value="Auto Transmission Not Satisfactory"/>
+                        <xs:enumeration value="Bearing Noise"/>
+                        <xs:enumeration value="Burning"/>
+                        <xs:enumeration value="Hard"/>
+                        <xs:enumeration value="Low Pick Up"/>
+                        <xs:enumeration value="Slip"/>
+                        <xs:enumeration value="Spongy"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="conformidade" fixed="yes">
+            </xs:element> 
+        </xs:choice>     
+    </xs:complexType>
+
+
+
 </xs:schema>
 
 
