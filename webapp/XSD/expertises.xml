@@ -27,6 +27,7 @@
         
         <oilLevel>
             <oilLevel>Dirty</oilLevel>
+            <oilLevel>Leakage from Sump/chambe</oilLevel>
         </oilLevel>
         
         <engineTransmission>
