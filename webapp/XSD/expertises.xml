@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<expertises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.NCar.com/expertises.xsd"
-    xsi:schemaLocation="http://www.NCar.com/expertises.xsd expertises.xsd"
+<expertises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://www.NCar.com/expertises.xsd" 
+    xsi:schemaLocation="http://www.NCar.com/expertises.xsd expertises.xsd" 
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
     
     <expertise>
@@ -12,7 +12,7 @@
         <expertiseName>A4S5</expertiseName>
         <status>
            <notRealised>
-               <inaccessibleLocation>yes</inaccessibleLocation>
+               <inaccessibleLocation></inaccessibleLocation>
            </notRealised>
         </status>
         
