@@ -38,9 +38,9 @@
             <conformidade>yes</conformidade>
         </refrigerationSystem>
         
-        <motorSupport>
-            <motorSupportTypeStatus>Broken</motorSupportTypeStatus>
-        </motorSupport>
+        <engineSupport>
+            <engineSupportStatus>Broken</engineSupportStatus>
+        </engineSupport>
         
         <engineSound>
             <conformidade>yes</conformidade>
@@ -89,9 +89,9 @@
             <conformidade></conformidade>
         </refrigerationSystem>
         
-        <motorSupport>
-            <motorSupportTypeStatus>Broken</motorSupportTypeStatus>
-        </motorSupport>
+        <engineSupport>
+            <engineSupportStatus>Broken</engineSupportStatus>
+        </engineSupport>
         
         <engineSound>
             <engineSoundStatus>Injector Noise</engineSoundStatus>
