@@ -34,7 +34,7 @@
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            <xs:element name = "batteryStatus" type="batteryType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name = "battery" type="batteryType" minOccurs="1" maxOccurs="1"/>
             <xs:element name = "oilLevel" type="oilLevelType" minOccurs="1" maxOccurs="1"/> 
             <xs:element name = "engineTransmission" type="engineTransmissionType" minOccurs="1" maxOccurs="1"/>
             <xs:element name = "refrigerationSystem" type="refrigerationSystemType" minOccurs="1" maxOccurs="1"/>
@@ -95,7 +95,7 @@
 
     <xs:complexType name="oilLevelType">
         <xs:choice>
-            <xs:element name="oilLevel" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="oilLevelStatus" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Dirty"/>
@@ -117,7 +117,7 @@
 
     <xs:complexType name="engineTransmissionType">
         <xs:choice>
-            <xs:element name="engineTransmission" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="engineTransmissionStatus" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Car not working on Petrol"/>
@@ -143,7 +143,7 @@
     
     <xs:complexType name="refrigerationSystemType">
         <xs:choice>
-            <xs:element name="refrigerationSystem" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="refrigerationSystemStatus" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Dirty"/>
@@ -160,7 +160,7 @@
 
     <xs:complexType name="motorSupportType">
         <xs:choice>
-            <xs:element name="motorSupportType">
+            <xs:element name="motorSupportTypeStatus">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Broken"/>
@@ -176,7 +176,7 @@
 
     <xs:complexType name="engineSoundType">
         <xs:choice>
-            <xs:element name="engineSound" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="engineSoundStatus" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Alternator Brg Noise"/>
@@ -196,7 +196,7 @@
 
     <xs:complexType name="gasesType">
         <xs:choice>
-            <xs:element name="gases">
+            <xs:element name="gasesStatus">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Black"/>
@@ -215,7 +215,7 @@
     
     <xs:complexType name="gearBoxType">
         <xs:choice>
-            <xs:element name="batteryStatus" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="gearBoxStatus" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType >
                     <xs:restriction base = "xs:string">
                         <xs:enumeration value="Auto Transmission Not Satisfactory"/>

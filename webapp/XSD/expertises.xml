@@ -21,13 +21,13 @@
             <EntityType>Customer</EntityType>
         </entity>
         
-        <batteryStatus>
+        <battery>
             <batteryStatus>Weak</batteryStatus>
-        </batteryStatus>
+        </battery>
         
         <oilLevel>
-            <oilLevel>Dirty</oilLevel>
-            <oilLevel>Leakage from Sump/chambe</oilLevel>
+            <oilLevelStatus>Dirty</oilLevelStatus>
+            <oilLevelStatus>Leakage from Sump/chambe</oilLevelStatus>
         </oilLevel>
         
         <engineTransmission>
@@ -39,7 +39,7 @@
         </refrigerationSystem>
         
         <motorSupport>
-            <motorSupportType>Broken</motorSupportType>
+            <motorSupportTypeStatus>Broken</motorSupportTypeStatus>
         </motorSupport>
         
         <engineSound>
@@ -47,14 +47,66 @@
         </engineSound>
         
         <gases>
-            <gases>Blue</gases>
+            <gasesStatus>Blue</gasesStatus>
         </gases>
         
         <gearBox>
-            <batteryStatus>Spongy</batteryStatus>
+            <gearBoxStatus>Spongy</gearBoxStatus>
         </gearBox>
         
         <kms>123000</kms>
+    </expertise>
+    
+    <expertise>
+        <code>234</code>
+        <startDate>2020-08-09T07:00:00</startDate>
+        <endDate>2020-08-09T08:00:00</endDate>
+        <partnerName>A2A3</partnerName>
+        <expertiseName>A4S5</expertiseName>
+        <status>
+            <realised></realised>
+        </status>
+        
+        <entity>
+            <name>Carlos</name>
+            <EntityType>RepairShop</EntityType>
+        </entity>
+        
+        <battery>
+            <conformidade></conformidade>
+        </battery>
+        
+        <oilLevel>
+            <conformidade></conformidade>
+        </oilLevel>
+        
+        <engineTransmission>
+            <engineTransmissionStatus>Car not working on Petrol</engineTransmissionStatus>
+            <engineTransmissionStatus>MIL light glowing</engineTransmissionStatus>
+        </engineTransmission>
+        
+        <refrigerationSystem>
+            <conformidade></conformidade>
+        </refrigerationSystem>
+        
+        <motorSupport>
+            <motorSupportTypeStatus>Broken</motorSupportTypeStatus>
+        </motorSupport>
+        
+        <engineSound>
+            <engineSoundStatus>Injector Noise</engineSoundStatus>
+            <engineSoundStatus>Tappet Noise</engineSoundStatus>
+        </engineSound>
+        
+        <gases>
+            <gasesStatus>Silencer assembly damaged</gasesStatus>
+        </gases>
+        
+        <gearBox>
+            <gearBoxStatus>Burning</gearBoxStatus>
+        </gearBox>
+        
+        <kms>124000</kms>
     </expertise>
     
     
