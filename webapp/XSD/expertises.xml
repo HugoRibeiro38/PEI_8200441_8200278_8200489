@@ -12,7 +12,7 @@
         <expertiseName>A4S5</expertiseName>
         <status>
            <notRealised>
-               <Other>Motivos ainda não apurados</Other>
+               <inaccessibleLocation>yes</inaccessibleLocation>
            </notRealised>
         </status>
         

@@ -67,8 +67,8 @@
     
     <xs:complexType name="notRealisedType">
         <xs:choice>
-            <xs:element name="inaccessibleLocation" fixed="X"/>
-            <xs:element name="missingVehicle" fixed="X"/>
+            <xs:element name="inaccessibleLocation" fixed="yes"/>
+            <xs:element name="missingVehicle" fixed="yes"/>
             <xs:element name="Other" type="c:descriptionType"/>
         </xs:choice>
     </xs:complexType>
