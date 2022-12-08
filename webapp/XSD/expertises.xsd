@@ -14,7 +14,7 @@
             <xs:sequence>
                 <xs:element name="partnerName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
                 <xs:element name="expertiseName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
-                <xs:element name="Date" type="xs:date" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+                <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
                 <xs:element name="expertise" type="expertiseType" minOccurs="1" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
@@ -24,8 +24,8 @@
     <xs:complexType name="expertiseType">
         <xs:sequence>
             <xs:element name="code" type="c:codeType" minOccurs="1" maxOccurs="1" />
-            <xs:element name="Start" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
-            <xs:element name="End" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="start" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="end" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
        
             <xs:element name="status" type="statusType" minOccurs="1" maxOccurs="1" />
             <xs:element name="entity" minOccurs="1" maxOccurs="1">
@@ -37,7 +37,7 @@
                 </xs:complexType>
             </xs:element>
 
-            <xs:element name="CheckList">
+            <xs:element name="checkList">
                 <xs:complexType>
                     <xs:all>
                         <xs:element name="battery" type="batteryType" minOccurs="1" maxOccurs="1"/>
@@ -87,7 +87,7 @@
 
     <xs:complexType name="batteryType">
         <xs:choice>
-            <xs:element name="Status">
+            <xs:element name="status">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Weak" />
@@ -104,7 +104,7 @@
 
     <xs:complexType name="oilLevelType">
         <xs:choice>
-            <xs:element name="Status" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="status" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Dirty" />
@@ -125,7 +125,7 @@
 
     <xs:complexType name="engineTransmissionType">
         <xs:choice>
-            <xs:element name="Status" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="status" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Car not working on Petrol" />
@@ -150,7 +150,7 @@
 
     <xs:complexType name="refrigerationSystemType">
         <xs:choice>
-            <xs:element name="Status" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="status" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Dirty" />
@@ -166,7 +166,7 @@
 
     <xs:complexType name="engineSupportType">
         <xs:choice>
-            <xs:element name="Status">
+            <xs:element name="status">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Broken" />
@@ -181,7 +181,7 @@
 
     <xs:complexType name="engineSoundType">
         <xs:choice>
-            <xs:element name="Status" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="status" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Alternator Brg Noise" />
@@ -200,7 +200,7 @@
 
     <xs:complexType name="gasesType">
         <xs:choice>
-            <xs:element name="Status">
+            <xs:element name="status">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Black" />
@@ -218,7 +218,7 @@
 
     <xs:complexType name="gearBoxType">
         <xs:choice>
-            <xs:element name="Status" minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="status" minOccurs="1" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Auto Transmission Not Satisfactory" />
