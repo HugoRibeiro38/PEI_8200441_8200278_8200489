@@ -1,116 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<expertises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns="http://www.NCar.com/expertises.xsd" 
-    xsi:schemaLocation="http://www.NCar.com/expertises.xsd expertises.xsd" 
+<expertises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.NCar.com/expertises.xsd"
+    xsi:schemaLocation="http://www.NCar.com/expertises.xsd expertises.xsd"
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
+
     
+    <partnerName>A2A3</partnerName>
+    <expertiseName>A4S5</expertiseName>
+    <Date>20222-12-08</Date>
+
     <expertise>
         <code>22</code>
-        <startDate>2020-08-08T07:00:00</startDate>
-        <endDate>2020-08-08T11:00:00</endDate>
-        <partnerName>A2A3</partnerName>
-        <expertiseName>A4S5</expertiseName>
+        <Start>12:00:00</Start>
+        <End>12:30:00</End>
         <status>
-           <notRealised>
-               <inaccessibleLocation></inaccessibleLocation>
-           </notRealised>
+            <notRealised>
+                <inaccessibleLocation></inaccessibleLocation>
+            </notRealised>
         </status>
-        
+
         <entity>
             <name>Bruno</name>
             <EntityType>Customer</EntityType>
         </entity>
-        
-        <battery>
-            <batteryStatus>Weak</batteryStatus>
-        </battery>
-        
-        <oilLevel>
-            <oilLevelStatus>Dirty</oilLevelStatus>
-            <oilLevelStatus>Leakage from Sump/chambe</oilLevelStatus>
-        </oilLevel>
-        
-        <engineTransmission>
-            <conformidade>yes</conformidade>
-        </engineTransmission>
-        
-        <refrigerationSystem>
-            <conformidade>yes</conformidade>
-        </refrigerationSystem>
-        
-        <engineSupport>
-            <engineSupportStatus>Broken</engineSupportStatus>
-        </engineSupport>
-        
-        <engineSound>
-            <conformidade>yes</conformidade>
-        </engineSound>
-        
-        <gases>
-            <gasesStatus>Blue</gasesStatus>
-        </gases>
-        
-        <gearBox>
-            <gearBoxStatus>Spongy</gearBoxStatus>
-        </gearBox>
-        
-        <kms>123000</kms>
-    </expertise>
+
+        <CheckList>
+            <battery>
+                <Status>Weak</Status>
+            </battery>
     
+            <oilLevel>
+                <Status>Dirty</Status>
+                <Status>Leakage from Sump/chambe</Status>
+            </oilLevel>
+    
+            <engineTransmission>
+                <conformidade>yes</conformidade>
+            </engineTransmission>
+    
+            <refrigerationSystem>
+                <conformidade>yes</conformidade>
+            </refrigerationSystem>
+    
+            <engineSupport>
+                <Status>Broken</Status>
+            </engineSupport>
+    
+            <engineSound>
+                <conformidade>yes</conformidade>
+            </engineSound>
+    
+            <gases>
+                <Status>Blue</Status>
+            </gases>
+    
+            <gearBox>
+                <Status>Spongy</Status>
+            </gearBox>
+    
+            <kms>123000</kms>
+        </CheckList>
+       
+    </expertise>
+
     <expertise>
         <code>234</code>
-        <startDate>2020-08-09T07:00:00</startDate>
-        <endDate>2020-08-09T08:00:00</endDate>
-        <partnerName>A2A3</partnerName>
-        <expertiseName>A4S5</expertiseName>
-        <status>
-            <realised></realised>
-        </status>
-        
+        <Start>12:00:00</Start>
+        <End>12:30:00</End>
+        <status></status>
+
         <entity>
             <name>Carlos</name>
             <EntityType>RepairShop</EntityType>
         </entity>
-        
-        <battery>
-            <conformidade></conformidade>
-        </battery>
-        
-        <oilLevel>
-            <conformidade></conformidade>
-        </oilLevel>
-        
-        <engineTransmission>
-            <engineTransmissionStatus>Car not working on Petrol</engineTransmissionStatus>
-            <engineTransmissionStatus>MIL light glowing</engineTransmissionStatus>
-        </engineTransmission>
-        
-        <refrigerationSystem>
-            <conformidade></conformidade>
-        </refrigerationSystem>
-        
-        <engineSupport>
-            <engineSupportStatus>Broken</engineSupportStatus>
-        </engineSupport>
-        
-        <engineSound>
-            <engineSoundStatus>Injector Noise</engineSoundStatus>
-            <engineSoundStatus>Tappet Noise</engineSoundStatus>
-        </engineSound>
-        
-        <gases>
-            <gasesStatus>Silencer assembly damaged</gasesStatus>
-        </gases>
-        
-        <gearBox>
-            <gearBoxStatus>Burning</gearBoxStatus>
-        </gearBox>
-        
-        <kms>124000</kms>
-    </expertise>
-    
-    
 
+        <CheckList>
+            <battery>
+                <conformidade></conformidade>
+            </battery>
+
+            <oilLevel>
+                <conformidade></conformidade>
+            </oilLevel>
+
+            <engineTransmission>
+                <Status>Car not working on Petrol</Status>
+                <Status>MIL light glowing</Status>
+            </engineTransmission>
+
+            <refrigerationSystem>
+                <conformidade></conformidade>
+            </refrigerationSystem>
+
+            <engineSupport>
+                <Status>Broken</Status>
+            </engineSupport>
+
+            <engineSound>
+                <Status>Injector Noise</Status>
+                <Status>Tappet Noise</Status>
+            </engineSound>
+
+            <gases>
+                <Status>Silencer assembly damaged</Status>
+            </gases>
+
+            <gearBox>
+                <Status>Burning</Status>
+            </gearBox>
+
+            <kms>124000</kms>
+        </CheckList>
+
+
+    </expertise>
 
 
 </expertises>
