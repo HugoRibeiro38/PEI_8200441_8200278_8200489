@@ -26,7 +26,6 @@
             <xs:element name="code" type="c:codeType" minOccurs="1" maxOccurs="1" />
             <xs:element name="start" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
             <xs:element name="end" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
-       
             <xs:element name="status" type="statusType" minOccurs="1" maxOccurs="1" />
             <xs:element name="entity" minOccurs="1" maxOccurs="1">
                 <xs:complexType>
