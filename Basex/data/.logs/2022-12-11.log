@@ -1,0 +1,64 @@
+11:31:38.981	SERVER	admin	OK	Server was started (port: 1984).
+11:31:39.077	SERVER	admin	OK	HTTP Server was started (port: 8080).
+11:31:43.543	[0:0:0:0:0:0:0:1]:63509	admin	REQUEST	[POST] /add/Reservation
+11:31:45.174	[0:0:0:0:0:0:0:1]:63509	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 71/15: [FODC0002] Resource 'C:/Program Files (x86)/BaseX/webapp/XSD/reservation.xsd' not found.	1632.9 ms
+11:32:54.595	[0:0:0:0:0:0:0:1]:63516	admin	REQUEST	[POST] /add/Reservation
+11:32:54.801	[0:0:0:0:0:0:0:1]:63516	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 72/15: [validate:error] Validation failed: 1:199: cvc-elt.1.a: Cannot find the declaration of element 'expertises'.	206.86 ms
+11:46:59.551	[0:0:0:0:0:0:0:1]:50159	admin	REQUEST	[PUT] /replace/Expertise
+11:46:59.611	[0:0:0:0:0:0:0:1]:50159	admin	200		60.63 ms
+11:50:02.469	[0:0:0:0:0:0:0:1]:50162	admin	REQUEST	[PUT] /replace/Expertise
+11:50:02.522	[0:0:0:0:0:0:0:1]:50162	admin	200		54.09 ms
+11:50:54.211	[0:0:0:0:0:0:0:1]:50162	admin	REQUEST	[POST] /add/Expertises
+11:50:54.347	[0:0:0:0:0:0:0:1]:50162	admin	200		135.88 ms
+11:50:56.567	[0:0:0:0:0:0:0:1]:50162	admin	REQUEST	[POST] /add/Expertises
+11:50:56.598	[0:0:0:0:0:0:0:1]:50162	admin	200		31.92 ms
+11:51:27.455	[0:0:0:0:0:0:0:1]:50162	admin	REQUEST	[PUT] /replace/Expertise
+11:51:27.492	[0:0:0:0:0:0:0:1]:50162	admin	200		37.71 ms
+11:51:49.264	[0:0:0:0:0:0:0:1]:50162	admin	REQUEST	[PUT] /replace/Expertise
+11:51:49.311	[0:0:0:0:0:0:0:1]:50162	admin	200		46.93 ms
+11:53:55.957	[0:0:0:0:0:0:0:1]:50171	admin	REQUEST	[PUT] /replace/Expertise
+11:53:56.004	[0:0:0:0:0:0:0:1]:50171	admin	200		46.81 ms
+11:53:58.440	[0:0:0:0:0:0:0:1]:50171	admin	REQUEST	[PUT] /replace/Expertise
+11:53:58.461	[0:0:0:0:0:0:0:1]:50171	admin	200		21.7 ms
+11:54:59.894	[0:0:0:0:0:0:0:1]:50173	admin	REQUEST	[PUT] /replace/Expertise
+11:54:59.948	[0:0:0:0:0:0:0:1]:50173	admin	200		55.45 ms
+11:55:37.591	[0:0:0:0:0:0:0:1]:50173	admin	REQUEST	[PUT] /replace/Expertise
+11:55:37.634	[0:0:0:0:0:0:0:1]:50173	admin	200		42.91 ms
+11:56:11.271	[0:0:0:0:0:0:0:1]:50173	admin	REQUEST	[PUT] /replace/Expertise
+11:56:11.325	[0:0:0:0:0:0:0:1]:50173	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/replace_expertises.xq, 52/15: [FODC0007] Resource path ' A2A3 A4S5 2022-12-08 22 12:00:00 12:30:00 Bruno Customer Weak Dirty Leakage from Sump/chambe yes yes Broken yes Blue Spongy 123000 234 12:00:00 12:30:00 Carlos RepairShop Car not working on Petrol MI...' is invalid.	53.41 ms
+11:58:41.052	[0:0:0:0:0:0:0:1]:56865	admin	REQUEST	[PUT] /replace/Expertise
+11:58:41.164	[0:0:0:0:0:0:0:1]:56865	admin	200		112.21 ms
+12:18:12.334	[0:0:0:0:0:0:0:1]:58404	admin	REQUEST	[GET] /Expertbydate
+12:18:12.369	[0:0:0:0:0:0:0:1]:58404	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/Expertbydate.xq, 17/99: [XPTY0019] text(): node expected, xs:string found: "A4S5".	34.41 ms
+12:19:31.785	[0:0:0:0:0:0:0:1]:64420	admin	REQUEST	[GET] /Expertbydate
+12:19:31.807	[0:0:0:0:0:0:0:1]:64420	admin	200		32.35 ms
+12:21:02.376	[0:0:0:0:0:0:0:1]:64424	admin	REQUEST	[GET] /Expertbydate
+12:21:02.404	[0:0:0:0:0:0:0:1]:64424	admin	200		28.01 ms
+12:40:10.395	[0:0:0:0:0:0:0:1]:59895	admin	REQUEST	[GET] /RealizedExpertises
+12:40:10.432	[0:0:0:0:0:0:0:1]:59895	admin	200		37.19 ms
+12:41:15.633	[0:0:0:0:0:0:0:1]:59897	admin	REQUEST	[GET] /RealizedExpertises
+12:41:15.662	[0:0:0:0:0:0:0:1]:59897	admin	200		28.72 ms
+12:43:12.115	[0:0:0:0:0:0:0:1]:59899	admin	REQUEST	[GET] /RealizedExpertises
+12:43:12.142	[0:0:0:0:0:0:0:1]:59899	admin	200		28.09 ms
+12:43:46.145	[0:0:0:0:0:0:0:1]:59899	admin	REQUEST	[GET] /RealizedExpertises
+12:43:46.176	[0:0:0:0:0:0:0:1]:59899	admin	200		31.12 ms
+12:46:38.984	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:46:39.014	[0:0:0:0:0:0:0:1]:59905	admin	200		29.96 ms
+12:46:45.855	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:46:45.890	[0:0:0:0:0:0:0:1]:59905	admin	200		34.7 ms
+12:47:04.866	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:47:04.895	[0:0:0:0:0:0:0:1]:59905	admin	200		28.92 ms
+12:47:12.258	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:47:12.279	[0:0:0:0:0:0:0:1]:59905	admin	200		21.53 ms
+12:47:18.077	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:47:18.105	[0:0:0:0:0:0:0:1]:59905	admin	200		28.41 ms
+12:47:23.539	[0:0:0:0:0:0:0:1]:59905	admin	REQUEST	[GET] /RealizedExpertises
+12:47:23.569	[0:0:0:0:0:0:0:1]:59905	admin	200		31.13 ms
+12:48:49.397	[0:0:0:0:0:0:0:1]:59907	admin	REQUEST	[GET] /RealizedExpertises
+12:48:49.423	[0:0:0:0:0:0:0:1]:59907	admin	200		26.08 ms
+12:48:55.861	[0:0:0:0:0:0:0:1]:59907	admin	REQUEST	[GET] /RealizedExpertises
+12:48:55.878	[0:0:0:0:0:0:0:1]:59907	admin	200		17.4 ms
+12:49:03.947	[0:0:0:0:0:0:0:1]:59907	admin	REQUEST	[GET] /RealizedExpertises
+12:49:03.988	[0:0:0:0:0:0:0:1]:59907	admin	200		40.89 ms
+12:54:13.285	[0:0:0:0:0:0:0:1]:59916	admin	REQUEST	[GET] /getDatafromExpertise
+12:54:13.311	[0:0:0:0:0:0:0:1]:59916	admin	200		26.95 ms
