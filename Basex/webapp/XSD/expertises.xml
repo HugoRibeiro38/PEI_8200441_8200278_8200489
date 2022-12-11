@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expertises xmlns="http://www.NCar.com/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.NCar.com/ expertises.xsd"
+    xmlns:c="http://www.NCar.com/commonTypes.xsd">
+
+
+    <partnerName>A2A3</partnerName>
+    <expertiseName>A4S5</expertiseName>
+    <date>2022-12-08</date>
+
+    <expertise>
+        <code>22</code>
+        <start>12:00:00</start>
+        <end>12:30:00</end>
+        <status>
+            <notRealised>
+                <inaccessibleLocation></inaccessibleLocation> <!-- se for realizada não chamamos Status -->
+            </notRealised>
+        </status>
+
+        <entity>
+            <name>Bruno</name>
+            <entityType>Customer</entityType>
+        </entity>
+
+        <checkList>
+            <battery>
+                <Status>Weak</Status>
+            </battery>
+
+            <oilLevel>
+                <Status>Dirty</Status>
+                <Status>Leakage from Sump/chambe</Status>
+            </oilLevel>
+
+            <engineTransmission>
+                <conformidade>yes</conformidade>
+            </engineTransmission>
+
+            <refrigerationSystem>
+                <conformidade>yes</conformidade>
+            </refrigerationSystem>
+
+            <engineSupport>
+                <Status>Broken</Status>
+            </engineSupport>
+
+            <engineSound>
+                <conformidade>yes</conformidade>
+            </engineSound>
+
+            <gases>
+                <Status>Blue</Status>
+            </gases>
+
+            <gearBox>
+                <Status>Spongy</Status>
+            </gearBox>
+
+            <kms>123000</kms>
+        </checkList>
+
+    </expertise>
+
+    <expertise>
+        <code>234</code>
+        <start>12:00:00</start>
+        <end>12:30:00</end>
+        <status></status>
+
+        <entity>
+            <name>Carlos</name>
+            <entityType>RepairShop</entityType>
+        </entity>
+
+        <checkList>
+            <battery>
+                <conformidade></conformidade>
+            </battery>
+
+            <oilLevel>
+                <conformidade></conformidade>
+            </oilLevel>
+
+            <engineTransmission>
+                <Status>Car not working on Petrol</Status>
+                <Status>MIL light glowing</Status>
+            </engineTransmission>
+
+            <refrigerationSystem>
+                <conformidade></conformidade>
+            </refrigerationSystem>
+
+            <engineSupport>
+                <Status>Broken</Status>
+            </engineSupport>
+
+            <engineSound>
+                <Status>Injector Noise</Status>
+                <Status>Tappet Noise</Status>
+            </engineSound>
+
+            <gases>
+                <Status>Silencer assembly damaged</Status>
+            </gases>
+
+            <gearBox>
+                <Status>Burning</Status>
+            </gearBox>
+
+            <kms>124000</kms>
+        </checkList>
+    </expertise>
+
+
+</expertises>

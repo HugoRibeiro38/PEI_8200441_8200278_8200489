@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "ed11884b-fc5c-4017-8159-a597249d80c8",
+		"name": "TP_Pratico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Expertise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<expertises xmlns=\"http://www.NCar.com/\"\r\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n    xsi:schemaLocation=\"http://www.NCar.com/ expertises.xsd\"\r\n    xmlns:c=\"http://www.NCar.com/commonTypes.xsd\">\r\n\r\n\r\n    <partnerName>A2A3</partnerName>\r\n    <expertiseName>A4S5</expertiseName>\r\n    <date>2022-12-08</date>\r\n\r\n    <expertise>\r\n        <code>22</code>\r\n        <start>12:00:00</start>\r\n        <end>12:30:00</end>\r\n        <status>\r\n            <notRealised>\r\n                <inaccessibleLocation></inaccessibleLocation> <!-- se for realizada não chamamos Status -->\r\n            </notRealised>\r\n        </status>\r\n\r\n        <entity>\r\n            <name>Bruno</name>\r\n            <entityType>Customer</entityType>\r\n        </entity>\r\n\r\n        <checkList>\r\n            <battery>\r\n                <Status>Weak</Status>\r\n            </battery>\r\n\r\n            <oilLevel>\r\n                <Status>Dirty</Status>\r\n                <Status>Leakage from Sump/chambe</Status>\r\n            </oilLevel>\r\n\r\n            <engineTransmission>\r\n                <conformidade>yes</conformidade>\r\n            </engineTransmission>\r\n\r\n            <refrigerationSystem>\r\n                <conformidade>yes</conformidade>\r\n            </refrigerationSystem>\r\n\r\n            <engineSupport>\r\n                <Status>Broken</Status>\r\n            </engineSupport>\r\n\r\n            <engineSound>\r\n                <conformidade>yes</conformidade>\r\n            </engineSound>\r\n\r\n            <gases>\r\n                <Status>Blue</Status>\r\n            </gases>\r\n\r\n            <gearBox>\r\n                <Status>Spongy</Status>\r\n            </gearBox>\r\n\r\n            <kms>123000</kms>\r\n        </checkList>\r\n\r\n    </expertise>\r\n\r\n    <expertise>\r\n        <code>234</code>\r\n        <start>12:00:00</start>\r\n        <end>12:30:00</end>\r\n        <status></status>\r\n\r\n        <entity>\r\n            <name>Carlos</name>\r\n            <entityType>RepairShop</entityType>\r\n        </entity>\r\n\r\n        <checkList>\r\n            <battery>\r\n                <conformidade></conformidade>\r\n            </battery>\r\n\r\n            <oilLevel>\r\n                <conformidade></conformidade>\r\n            </oilLevel>\r\n\r\n            <engineTransmission>\r\n                <Status>Car not working on Petrol</Status>\r\n                <Status>MIL light glowing</Status>\r\n            </engineTransmission>\r\n\r\n            <refrigerationSystem>\r\n                <conformidade></conformidade>\r\n            </refrigerationSystem>\r\n\r\n            <engineSupport>\r\n                <Status>Broken</Status>\r\n            </engineSupport>\r\n\r\n            <engineSound>\r\n                <Status>Injector Noise</Status>\r\n                <Status>Tappet Noise</Status>\r\n            </engineSound>\r\n\r\n            <gases>\r\n                <Status>Silencer assembly damaged</Status>\r\n            </gases>\r\n\r\n            <gearBox>\r\n                <Status>Burning</Status>\r\n            </gearBox>\r\n\r\n            <kms>124000</kms>\r\n        </checkList>\r\n    </expertise>\r\n\r\n\r\n</expertises>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/add/Expertises",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add",
+						"Expertises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Reservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/add/Reservation",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add",
+						"Reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Expertise",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<expertises xmlns=\"http://www.NCar.com/\"\r\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n    xsi:schemaLocation=\"http://www.NCar.com/ expertises.xsd\"\r\n    xmlns:c=\"http://www.NCar.com/commonTypes.xsd\">\r\n\r\n\r\n    <partnerName>A2A3</partnerName>\r\n    <expertiseName>A4S5</expertiseName>\r\n    <date>2022-12-08</date>\r\n\r\n    <expertise>\r\n        <code>22</code>\r\n        <start>12:00:00</start>\r\n        <end>12:30:00</end>\r\n        <status>\r\n            <notRealised>\r\n                <inaccessibleLocation></inaccessibleLocation> <!-- se for realizada não chamamos Status -->\r\n            </notRealised>\r\n        </status>\r\n\r\n        <entity>\r\n            <name>Marcio</name>\r\n            <entityType>Customer</entityType>\r\n        </entity>\r\n\r\n        <checkList>\r\n            <battery>\r\n                <Status>Weak</Status>\r\n            </battery>\r\n\r\n            <oilLevel>\r\n                <Status>Dirty</Status>\r\n                <Status>Leakage from Sump/chambe</Status>\r\n            </oilLevel>\r\n\r\n            <engineTransmission>\r\n                <conformidade>yes</conformidade>\r\n            </engineTransmission>\r\n\r\n            <refrigerationSystem>\r\n                <conformidade>yes</conformidade>\r\n            </refrigerationSystem>\r\n\r\n            <engineSupport>\r\n                <Status>Broken</Status>\r\n            </engineSupport>\r\n\r\n            <engineSound>\r\n                <conformidade>yes</conformidade>\r\n            </engineSound>\r\n\r\n            <gases>\r\n                <Status>Blue</Status>\r\n            </gases>\r\n\r\n            <gearBox>\r\n                <Status>Spongy</Status>\r\n            </gearBox>\r\n\r\n            <kms>123000</kms>\r\n        </checkList>\r\n\r\n    </expertise>\r\n\r\n    <expertise>\r\n        <code>234</code>\r\n        <start>12:00:00</start>\r\n        <end>12:30:00</end>\r\n        <status></status>\r\n\r\n        <entity>\r\n            <name>Carlos</name>\r\n            <entityType>RepairShop</entityType>\r\n        </entity>\r\n\r\n        <checkList>\r\n            <battery>\r\n                <conformidade></conformidade>\r\n            </battery>\r\n\r\n            <oilLevel>\r\n                <conformidade></conformidade>\r\n            </oilLevel>\r\n\r\n            <engineTransmission>\r\n                <Status>Car not working on Petrol</Status>\r\n                <Status>MIL light glowing</Status>\r\n            </engineTransmission>\r\n\r\n            <refrigerationSystem>\r\n                <conformidade></conformidade>\r\n            </refrigerationSystem>\r\n\r\n            <engineSupport>\r\n                <Status>Broken</Status>\r\n            </engineSupport>\r\n\r\n            <engineSound>\r\n                <Status>Injector Noise</Status>\r\n                <Status>Tappet Noise</Status>\r\n            </engineSound>\r\n\r\n            <gases>\r\n                <Status>Silencer assembly damaged</Status>\r\n            </gases>\r\n\r\n            <gearBox>\r\n                <Status>Burning</Status>\r\n            </gearBox>\r\n\r\n            <kms>124000</kms>\r\n        </checkList>\r\n    </expertise>\r\n\r\n\r\n</expertises>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/replace/Expertise",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"replace",
+						"Expertise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation by ExpertiseName and Date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "expertiseName",
+							"value": "A4S5",
+							"type": "default"
+						},
+						{
+							"key": "date",
+							"value": "2022-12-08",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/Expertbydate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Expertbydate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RealizedExpertises or not",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "expertiseName",
+							"value": "A4S5",
+							"type": "default"
+						},
+						{
+							"key": "date",
+							"value": "2022-12-08",
+							"type": "default"
+						},
+						{
+							"key": "type",
+							"value": "realized",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/RealizedExpertises",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"RealizedExpertises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDatafromExpertise",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "22",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/getDatafromExpertise",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getDatafromExpertise"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

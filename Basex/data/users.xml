@@ -1,0 +1,11 @@
+<users>
+  <user name="admin" permission="admin">
+    <password algorithm="digest">
+      <hash>304bdfb0383c16f070a897fc1eb25cb4</hash>
+    </password>
+    <password algorithm="salted-sha256">
+      <salt>904382072222700</salt>
+      <hash>aa0854daec5453c1b6626e6a99c25cc825e384a7e334612d88e630949618a4e7</hash>
+    </password>
+  </user>
+</users>
