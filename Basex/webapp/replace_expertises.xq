@@ -32,24 +32,26 @@ declare function page:CodeEquals($codeToCheck as item()){
   
 };
 
+(:A substituição de um documento correspondente às peritagens de um determinado dia;:)
  declare %updating
   %rest:path("replace/Expertise")
   %rest:PUT("{$xml}")
   %rest:consumes('application/xml')
 function page:ReplaceExpertise($xml as item()){
   
-   let $xsd_expertise := "XSD/expertises.xsd"
+   let $xsd_expertise := "XSD_XML/expertises.xsd"
   let $expertiseNameCount := page:getCountExpertise($xml//expertiseName) 
   let $partnerNameCount := page:getCountPartnerName($xml//partnerName) 
   let $code := page:CodeEquals($xml//code)
   
-
+(:Comparar atraves do expertiseName e data:)
     return if($expertiseNameCount =1 and 
 $partnerNameCount=1)then(
    for $expertises in db:open("NBCar")//expertises
-   where ($xml//date/text()[. = $expertises//date/text()]
+   where ($xml//expertiseName/text()[. = $expertises//expertiseName/text()]
  )
- return replace node $expertises with $xml,update:output("Alterado Com sucesso") 
+ let $expertises_byDate := $expertises[.//date/text() eq $xml//date/text()]
+ return replace node $expertises_byDate with $xml,update:output("Alterado Com sucesso") 
 )else(
   update:output("Nao foi possivel alterar o ficheiro")
 )

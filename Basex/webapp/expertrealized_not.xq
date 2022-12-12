@@ -17,6 +17,7 @@ declare function page:Expertbydate($expertiseName as xs:string,$date as xs:strin
   
 };
 
+(:Apresentar as peritagens realizadas/não realizadas num determinado dia para um dado parceiro;:)
 declare
 %rest:path("/RealizedExpertises")
 %rest:GET

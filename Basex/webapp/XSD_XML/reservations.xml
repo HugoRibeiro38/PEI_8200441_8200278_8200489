@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<reservations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns="https://www.NCar.com/"
-    xsi:schemaLocation="https://www.NCar.com/ reservations.xsd"
+<reservations xmlns="http://www.NCar.com/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.NCar.com/ reservations.xsd"
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
-    
-  
+
+
     <partnerName>A2A3</partnerName>
     <expertiseName>A4S5</expertiseName>
-    <Date>20222-12-08</Date>
+    <date>20222-12-08</date>
 
 
-      <!-- Reserva COD 12 -->
+    <!-- Reserva COD 12 -->
     <reservation>
-        
+
         <code>12</code>
         <Start>08:00:00</Start>
         <End>12:00:00</End>
@@ -24,7 +24,7 @@
             <coordinates></coordinates> <!-- caso não seja possível fornecer coordenadas basta apenas
             não chamar elemento coordinates ou chamar e não chamar latitude e longitude-->
         </address>
-        
+
         <vehicleInfo>
             <brand>Ford</brand>
             <model>Fiesta</model>
@@ -40,7 +40,7 @@
             </client>
         </typeOfContact>
     </reservation>
-    
+
     <reservation>
         <code>14</code>
         <Start>07:00:00</Start>
@@ -51,11 +51,11 @@
             <zipCode>4615-172</zipCode>
             <city>Lixa</city>
             <coordinates>
-                <latitude>23.4</latitude>  <!-- Caso seja possível enviar coordenadas : xs:decimal -->
+                <latitude>23.4</latitude> <!-- Caso seja possível enviar coordenadas : xs:decimal -->
                 <longitude>35</longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->
             </coordinates>
         </address>
-        
+
         <vehicleInfo>
             <brand>Opel</brand>
             <model>Corsa</model>
@@ -71,6 +71,6 @@
             </client>
         </typeOfContact>
     </reservation>
-    
-      
+
+
 </reservations>

@@ -10,6 +10,7 @@ declare
 %rest:GET
 %rest:form-param("code","{$code}", "(no code)")
 
+(:• Consultar os dados de uma peritagem.:)
 function page:realizedExpertises($code){
   if($code != "(no code)")then(
     let $expertise := db:open("NBCar")//expertises//expertise[.//code/text() = $code]

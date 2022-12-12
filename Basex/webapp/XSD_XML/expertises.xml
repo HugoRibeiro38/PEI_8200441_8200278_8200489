@@ -4,7 +4,6 @@
     xsi:schemaLocation="http://www.NCar.com/ expertises.xsd"
     xmlns:c="http://www.NCar.com/commonTypes.xsd">
 
-
     <partnerName>A2A3</partnerName>
     <expertiseName>A4S5</expertiseName>
     <date>2022-12-08</date>
