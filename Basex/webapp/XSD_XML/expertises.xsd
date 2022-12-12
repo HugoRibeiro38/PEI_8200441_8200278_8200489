@@ -28,7 +28,7 @@
             <xs:element name="end" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
        
             <xs:element name="status" type="statusType" minOccurs="1" maxOccurs="1" />
-            <xs:element name="entity" minOccurs="1" maxOccurs="1">
+            <xs:element name="entity" minOccurs="0" maxOccurs="1">
                 <xs:complexType>
                     <xs:all>
                         <xs:element name="name" type="c:identificationType" minOccurs="1" maxOccurs="1" /> <!-- AlfaNumérico, não devemos alterar? -->
@@ -37,7 +37,7 @@
                 </xs:complexType>
             </xs:element>
 
-            <xs:element name="checkList">
+            <xs:element name="checkList" minOccurs="0">
                 <xs:complexType>
                     <xs:all>
                         <xs:element name="battery" type="batteryType" minOccurs="1" maxOccurs="1"/>

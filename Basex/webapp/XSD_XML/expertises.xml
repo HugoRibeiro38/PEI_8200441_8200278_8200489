@@ -18,51 +18,8 @@
                 <inaccessibleLocation></inaccessibleLocation> <!-- se for realizada não chamamos Status -->
             </notRealised>
         </status>
-
-        <entity>
-            <name>Bruno</name>
-            <entityType>Customer</entityType>
-        </entity>
-
-        <checkList>
-            <battery>
-                <Status>Weak</Status>
-            </battery>
-
-            <oilLevel>
-                <Status>Dirty</Status>
-                <Status>Leakage from Sump/chambe</Status>
-            </oilLevel>
-
-            <engineTransmission>
-                <conformidade>yes</conformidade>
-            </engineTransmission>
-
-            <refrigerationSystem>
-                <conformidade>yes</conformidade>
-            </refrigerationSystem>
-
-            <engineSupport>
-                <Status>Broken</Status>
-            </engineSupport>
-
-            <engineSound>
-                <conformidade>yes</conformidade>
-            </engineSound>
-
-            <gases>
-                <Status>Blue</Status>
-            </gases>
-
-            <gearBox>
-                <Status>Spongy</Status>
-            </gearBox>
-
-            <kms>123000</kms>
-        </checkList>
-
     </expertise>
-
+    
     <expertise>
         <code>234</code>
         <start>12:00:00</start>
