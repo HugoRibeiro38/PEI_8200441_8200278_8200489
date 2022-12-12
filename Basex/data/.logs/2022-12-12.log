@@ -1,0 +1,92 @@
+18:38:01.843	SERVER	admin	OK	Server was started (port: 1984).
+18:38:02.040	SERVER	admin	OK	HTTP Server was started (port: 8080).
+18:38:08.942	[0:0:0:0:0:0:0:1]:52263	admin	REQUEST	[POST] /add/Expertises
+18:38:11.129	[0:0:0:0:0:0:0:1]:52263	admin	200		2185.78 ms
+18:39:41.427	[0:0:0:0:0:0:0:1]:52268	admin	REQUEST	[POST] /add/Expertises
+18:39:41.794	[0:0:0:0:0:0:0:1]:52268	admin	200		367.89 ms
+18:40:45.511	[0:0:0:0:0:0:0:1]:52273	admin	REQUEST	[POST] /add/Expertises
+18:40:45.577	[0:0:0:0:0:0:0:1]:52273	admin	200		66.55 ms
+18:44:11.037	[0:0:0:0:0:0:0:1]:61185	admin	REQUEST	[GET] /Expertbydate
+18:44:11.077	[0:0:0:0:0:0:0:1]:61185	admin	200		40.83 ms
+18:45:36.430	[0:0:0:0:0:0:0:1]:52393	admin	REQUEST	[GET] /Expertbydate
+18:45:36.468	[0:0:0:0:0:0:0:1]:52393	admin	200		38.02 ms
+18:50:33.004	[0:0:0:0:0:0:0:1]:52512	admin	REQUEST	[POST] /add/Reservation
+18:50:33.065	[0:0:0:0:0:0:0:1]:52512	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 9/41: [XPTY0004] Cannot promote empty-sequence() to item(): $expertName := ().	60.39 ms
+18:54:18.710	[0:0:0:0:0:0:0:1]:64676	admin	REQUEST	[POST] /add/Reservation
+18:54:18.765	[0:0:0:0:0:0:0:1]:64676	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 9/41: [XPTY0004] Cannot promote empty-sequence() to item(): $expertName := ().	55.37 ms
+18:55:24.864	[0:0:0:0:0:0:0:1]:64680	admin	REQUEST	[POST] /add/Reservation
+18:55:24.908	[0:0:0:0:0:0:0:1]:64680	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 9/41: [XPTY0004] Cannot promote empty-sequence() to item(): $expertName := ().	43.4 ms
+18:55:54.135	[0:0:0:0:0:0:0:1]:64680	admin	REQUEST	[POST] /add/Reservation
+18:55:54.188	[0:0:0:0:0:0:0:1]:64680	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 9/41: [XPTY0004] Cannot promote empty-sequence() to item(): $expertiseName := ().	54.03 ms
+18:57:29.653	[0:0:0:0:0:0:0:1]:64684	admin	REQUEST	[POST] /add/Reservation
+18:57:29.693	[0:0:0:0:0:0:0:1]:64684	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 15/43: [XPTY0004] Cannot promote empty-sequence() to item(): $partnerName := ().	39.23 ms
+19:00:07.633	[0:0:0:0:0:0:0:1]:64724	admin	REQUEST	[POST] /add/Reservation
+19:00:07.682	[0:0:0:0:0:0:0:1]:64724	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 15/43: [XPTY0004] Cannot promote empty-sequence() to item(): $partnerName := ().	49.09 ms
+19:00:49.296	[0:0:0:0:0:0:0:1]:64724	admin	REQUEST	[POST] /add/Reservation
+19:00:49.317	[0:0:0:0:0:0:0:1]:64724	admin	200		21.2 ms
+19:01:13.375	[0:0:0:0:0:0:0:1]:64724	admin	REQUEST	[POST] /add/Reservation
+19:01:13.396	[0:0:0:0:0:0:0:1]:64724	admin	200		20.87 ms
+19:01:21.623	[0:0:0:0:0:0:0:1]:64724	admin	REQUEST	[POST] /add/Reservation
+19:01:21.670	[0:0:0:0:0:0:0:1]:64724	admin	200		47.05 ms
+19:02:43.208	[0:0:0:0:0:0:0:1]:64733	admin	REQUEST	[POST] /add/Expertises
+19:02:43.266	[0:0:0:0:0:0:0:1]:64733	admin	200		58.03 ms
+19:05:04.679	[0:0:0:0:0:0:0:1]:64740	admin	REQUEST	[POST] /add/Expertises
+19:05:04.799	[0:0:0:0:0:0:0:1]:64740	admin	200		130.6 ms
+19:06:14.364	[0:0:0:0:0:0:0:1]:64743	admin	REQUEST	[POST] /add/Reservation
+19:06:14.408	[0:0:0:0:0:0:0:1]:64743	admin	200		45.27 ms
+19:06:26.480	[0:0:0:0:0:0:0:1]:64743	admin	REQUEST	[POST] /add/Reservation
+19:06:26.510	[0:0:0:0:0:0:0:1]:64743	admin	200		30.45 ms
+19:06:59.212	[0:0:0:0:0:0:0:1]:64743	admin	REQUEST	[POST] /add/Reservation
+19:06:59.261	[0:0:0:0:0:0:0:1]:64743	admin	200		49.5 ms
+19:08:34.748	[0:0:0:0:0:0:0:1]:64757	admin	REQUEST	[POST] /add/Reservation
+19:08:34.834	[0:0:0:0:0:0:0:1]:64757	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 72/15: [validate:error] Validation failed: 1:203: cvc-elt.1.a: Cannot find the declaration of element 'reservations'.	86.36 ms
+19:11:54.245	[0:0:0:0:0:0:0:1]:64768	admin	REQUEST	[POST] /add/Reservation
+19:11:54.307	[0:0:0:0:0:0:0:1]:64768	admin	500	Stopped at C:/Program Files (x86)/BaseX/webapp/add.xq, 61/10: [db:lock] Database 'NBCar' is opened by another process.	63.16 ms
+19:14:49.952	[0:0:0:0:0:0:0:1]:64771	admin	REQUEST	[POST] /add/Reservation
+19:14:50.035	[0:0:0:0:0:0:0:1]:64771	admin	200		82.95 ms
+19:15:56.578	[0:0:0:0:0:0:0:1]:64064	admin	REQUEST	[GET] /Reservationbydate
+19:15:56.605	[0:0:0:0:0:0:0:1]:64064	admin	200		27.88 ms
+19:17:24.744	[0:0:0:0:0:0:0:1]:64066	admin	REQUEST	[GET] /Reservationbydate
+19:17:24.769	[0:0:0:0:0:0:0:1]:64066	admin	200		24.77 ms
+19:17:43.464	[0:0:0:0:0:0:0:1]:64066	admin	REQUEST	[GET] /Reservationbydate
+19:17:43.482	[0:0:0:0:0:0:0:1]:64066	admin	200		18.1 ms
+19:17:46.378	[0:0:0:0:0:0:0:1]:64066	admin	REQUEST	[GET] /Reservationbydate
+19:17:46.395	[0:0:0:0:0:0:0:1]:64066	admin	200		17.37 ms
+19:18:52.987	[0:0:0:0:0:0:0:1]:64073	admin	REQUEST	[GET] /Reservationbydate
+19:18:53.017	[0:0:0:0:0:0:0:1]:64073	admin	200		31.27 ms
+19:22:43.741	[0:0:0:0:0:0:0:1]:64187	admin	REQUEST	[GET] /RealizedExpertises
+19:22:43.776	[0:0:0:0:0:0:0:1]:64187	admin	200		34.55 ms
+19:23:05.099	[0:0:0:0:0:0:0:1]:64187	admin	REQUEST	[GET] /RealizedExpertises
+19:23:05.129	[0:0:0:0:0:0:0:1]:64187	admin	200		29.59 ms
+19:24:02.698	[0:0:0:0:0:0:0:1]:64187	admin	REQUEST	[GET] /RealizedExpertises
+19:24:02.717	[0:0:0:0:0:0:0:1]:64187	admin	200		18.97 ms
+19:24:10.391	[0:0:0:0:0:0:0:1]:64187	admin	REQUEST	[GET] /RealizedExpertises
+19:24:10.408	[0:0:0:0:0:0:0:1]:64187	admin	200		18.52 ms
+19:27:18.842	[0:0:0:0:0:0:0:1]:64192	admin	REQUEST	[GET] /getDatafromExpertise
+19:27:18.865	[0:0:0:0:0:0:0:1]:64192	admin	200		23.29 ms
+19:27:35.309	[0:0:0:0:0:0:0:1]:64192	admin	REQUEST	[GET] /getDatafromExpertise
+19:27:35.329	[0:0:0:0:0:0:0:1]:64192	admin	200		21.11 ms
+19:27:39.519	[0:0:0:0:0:0:0:1]:64192	admin	REQUEST	[GET] /getDatafromExpertise
+19:27:39.545	[0:0:0:0:0:0:0:1]:64192	admin	200		26.1 ms
+19:43:28.131	[0:0:0:0:0:0:0:1]:53079	admin	REQUEST	[PUT] /replace/Expertise
+19:43:28.227	[0:0:0:0:0:0:0:1]:53079	admin	200		95.52 ms
+19:45:38.414	[0:0:0:0:0:0:0:1]:53086	admin	REQUEST	[POST] /add/Reservation
+19:45:38.474	[0:0:0:0:0:0:0:1]:53086	admin	200		59.97 ms
+19:47:33.739	[0:0:0:0:0:0:0:1]:53100	admin	REQUEST	[POST] /add/Reservation
+19:47:33.807	[0:0:0:0:0:0:0:1]:53100	admin	200		68.51 ms
+19:47:57.058	[0:0:0:0:0:0:0:1]:53100	admin	REQUEST	[PUT] /replace/Expertise
+19:47:57.106	[0:0:0:0:0:0:0:1]:53100	admin	200		47.74 ms
+19:48:33.768	[0:0:0:0:0:0:0:1]:53100	admin	REQUEST	[GET] /Reservationbydate
+19:48:33.795	[0:0:0:0:0:0:0:1]:53100	admin	200		26.85 ms
+19:51:01.206	[0:0:0:0:0:0:0:1]:51662	admin	REQUEST	[GET] /RealizedExpertises
+19:51:01.237	[0:0:0:0:0:0:0:1]:51662	admin	200		31.75 ms
+19:53:15.930	[0:0:0:0:0:0:0:1]:63785	admin	REQUEST	[GET] /RealizedExpertises
+19:53:15.950	[0:0:0:0:0:0:0:1]:63785	admin	200		20.07 ms
+19:53:39.311	[0:0:0:0:0:0:0:1]:63785	admin	REQUEST	[GET] /RealizedExpertises
+19:53:39.338	[0:0:0:0:0:0:0:1]:63785	admin	200		27.78 ms
+19:54:01.033	[0:0:0:0:0:0:0:1]:63785	admin	REQUEST	[GET] /getDatafromExpertise
+19:54:01.057	[0:0:0:0:0:0:0:1]:63785	admin	200		24.17 ms
+19:54:21.314	[0:0:0:0:0:0:0:1]:63785	admin	REQUEST	[GET] /getDatafromExpertise
+19:54:21.330	[0:0:0:0:0:0:0:1]:63785	admin	200		14.84 ms
+19:54:37.533	[0:0:0:0:0:0:0:1]:63785	admin	REQUEST	[GET] /getDatafromExpertise
+19:54:37.565	[0:0:0:0:0:0:0:1]:63785	admin	200		32.34 ms

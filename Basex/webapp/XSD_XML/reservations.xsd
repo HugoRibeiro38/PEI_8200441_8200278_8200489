@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
-           xmlns="https://www.NCar.com/"
+<xs:schema xmlns="http://www.NCar.com/"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="https://www.NCar.com/"
+           targetNamespace="http://www.NCar.com/"
            xmlns:c="http://www.NCar.com/commonTypes.xsd"
            elementFormDefault="qualified">
 
@@ -14,7 +13,7 @@
         <xs:sequence>
             <xs:element name="partnerName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
             <xs:element name="expertiseName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
-            <xs:element name="Date" type="xs:date" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
+            <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
             <xs:element name="reservation" type="reservationType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
