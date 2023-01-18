@@ -7,15 +7,15 @@
 
     <partnerName>A2A3</partnerName>
     <expertiseName>A4S5</expertiseName>
-    <date>20222-12-08</date>
+    <date>2022-12-08T12:00:00Z</date>
 
 
     <!-- Reserva COD 12 -->
     <reservation>
 
         <code>12</code>
-        <Start>08:00:00</Start>
-        <End>12:00:00</End>
+        <Start>2022-12-08T08:00:00Z</Start>
+        <End>2022-12-08T12:00:00Z</End>
         <address>
             <street>Rua do Curral</street>
             <numDoor>12</numDoor>
@@ -43,8 +43,8 @@
 
     <reservation>
         <code>14</code>
-        <Start>07:00:00</Start>
-        <End>11:00:00</End>
+        <Start>2022-12-08T07:00:00Z</Start>
+        <End>2022-12-08T11:00:00Z</End>
         <address>
             <street>Rua do Curral</street>
             <numDoor>12</numDoor>

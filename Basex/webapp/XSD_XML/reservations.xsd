@@ -13,7 +13,7 @@
         <xs:sequence>
             <xs:element name="partnerName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
             <xs:element name="expertiseName" type="c:identificationType" minOccurs="1" maxOccurs="1" />
-            <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
+            <xs:element name="date" type="c:ISODateTime" minOccurs="1" maxOccurs="1"/><!-- Atributo adicional -->
             <xs:element name="reservation" type="reservationType" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -23,8 +23,8 @@
 <xs:complexType name="reservationType">
         <xs:sequence>
             <xs:element name="code" type="c:codeType" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="Start" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
-            <xs:element name="End" type="xs:time" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="Start" type="c:ISODateTime" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
+            <xs:element name="End" type="c:ISODateTime" minOccurs="1" maxOccurs="1" /> <!-- Atributo adicional do dia, a hora e min são obrigatorios -->
             <xs:element name="address" type="addressType" minOccurs="1" maxOccurs="1"/>
             <xs:element name = "vehicleInfo" type="infoVehicleType" minOccurs="1" maxOccurs="1"/>
             <xs:element name="typeOfContact" type="contactOf" minOccurs="1" maxOccurs="1"/>
