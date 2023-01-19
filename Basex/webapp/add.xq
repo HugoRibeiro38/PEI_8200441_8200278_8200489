@@ -64,7 +64,7 @@ function page:addExpertise($xml as item())
 (:Codigo Marcacao não existe:)
  return if($expertiseNameCount =1 and 
 $partnerNameCount=1 and $code =0)then(
-  validate:xsd($xml,$xsd_expertise),db:add("NBCar",$xml,"expertise"),
+  validate:xsd($xml,$xsd_expertise),db:add("NBCar",$xml,concat($xml//date/text(),"_expertise")),
  update:output("Adicionado Com Sucesso a DB NBCar")
 )else( update:output("Erro ao adicionar")
 )
@@ -91,7 +91,7 @@ function page:addReservation($xml as item())
   (:Codigo Marcacao não existe:)
  return if((: $expertiseNameCount =1 and :)  
 $partnerNameCount=1 and $code =0)then(
-  validate:xsd($xml,$xsd_reservation),db:add("NBCar",$xml,"reservation"),
+  validate:xsd($xml,$xsd_reservation),db:add("NBCar",$xml,concat($xml//date/text(),"_reservation")),
  update:output("Adicionado Com Sucesso a DB NBCar")
 )else(
    update:output("Erro ao adicionar")

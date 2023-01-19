@@ -6,12 +6,12 @@
 
     <partnerName>A2A3</partnerName>
     <expertiseName>A4S5</expertiseName>
-    <date>2022-12-08T12:00:00Z</date>
+    <date>2022-12-08</date>
 
     <expertise>
         <code>22</code>
-        <start>2022-12-08T12:00:00Z</start>
-        <end>2022-12-08T12:30:00Z</end>
+        <start>12:00:00</start>
+        <end>12:30:00</end>
         <status>
             <notRealised>
                 <inaccessibleLocation></inaccessibleLocation> <!-- se for realizada não chamamos Status -->
@@ -21,8 +21,8 @@
     
     <expertise>
         <code>234</code>
-        <start>2022-12-08T12:00:00Z</start>
-        <end>2022-12-08T12:00:00Z</end>
+        <start>12:00:00</start>
+        <end>12:30:00</end>
         <status></status>
 
         <entity>
@@ -32,41 +32,36 @@
 
         <checkList>
             <battery>
-                <conformidade>yes</conformidade>
+                <conformidade></conformidade>
             </battery>
 
             <oilLevel>
-                <conformidade>yes</conformidade>
+                <conformidade></conformidade>
             </oilLevel>
 
             <engineTransmission>
-                <conformidade>no</conformidade>
                 <Status>Car not working on Petrol</Status>
                 <Status>MIL light glowing</Status>
             </engineTransmission>
 
             <refrigerationSystem>
-                <conformidade>yes</conformidade>
+                <conformidade></conformidade>
             </refrigerationSystem>
 
             <engineSupport>
-                <conformidade>no</conformidade>
                 <Status>Broken</Status>
             </engineSupport>
 
             <engineSound>
-                <conformidade>no</conformidade>
                 <Status>Injector Noise</Status>
                 <Status>Tappet Noise</Status>
             </engineSound>
 
             <gases>
-                <conformidade>no</conformidade>
                 <Status>Silencer assembly damaged</Status>
             </gases>
 
             <gearBox>
-                <conformidade>no</conformidade>
                 <Status>Burning</Status>
             </gearBox>
 

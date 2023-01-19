@@ -38,15 +38,6 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<reservations xmlns=\"http://www.NCar.com/\"\r\n    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n    xsi:schemaLocation=\"http://www.NCar.com/ reservations.xsd\"\r\n    xmlns:c=\"http://www.NCar.com/commonTypes.xsd\">\r\n\r\n\r\n    <partnerName>A2A3</partnerName>\r\n    <expertiseName>A4S5</expertiseName>\r\n    <date>2022-12-08T12:00:00Z</date>\r\n\r\n\r\n    <!-- Reserva COD 12 -->\r\n    <reservation>\r\n\r\n        <code>12</code>\r\n        <Start>2022-12-08T08:00:00Z</Start>\r\n        <End>2022-12-08T12:00:00Z</End>\r\n        <address>\r\n            <street>Rua do Curral</street>\r\n            <numDoor>12</numDoor>\r\n            <zipCode>4610-156</zipCode>\r\n            <city>Felgueiras</city>\r\n            <coordinates></coordinates> <!-- caso não seja possível fornecer coordenadas basta apenas\r\n            não chamar elemento coordinates ou chamar e não chamar latitude e longitude-->\r\n        </address>\r\n\r\n        <vehicleInfo>\r\n            <brand>Ford</brand>\r\n            <model>Fiesta</model>\r\n            <fuel>Diesel</fuel>\r\n            <transmission>Manual</transmission>\r\n            <year>1998</year>\r\n            <horsePower>76</horsePower>\r\n        </vehicleInfo>\r\n        <typeOfContact>\r\n            <client>\r\n                <name>José Meireles</name>\r\n                <property>Owner</property>\r\n            </client>\r\n        </typeOfContact>\r\n    </reservation>\r\n\r\n    <reservation>\r\n        <code>14</code>\r\n        <Start>2022-12-08T07:00:00Z</Start>\r\n        <End>2022-12-08T11:00:00Z</End>\r\n        <address>\r\n            <street>Rua do Curral</street>\r\n            <numDoor>12</numDoor>\r\n            <zipCode>4615-172</zipCode>\r\n            <city>Lixa</city>\r\n            <coordinates>\r\n                <latitude>23.4</latitude> <!-- Caso seja possível enviar coordenadas : xs:decimal -->\r\n                <longitude>35</longitude> <!-- Caso seja possível enviar coordenadas xs:integer -->\r\n            </coordinates>\r\n        </address>\r\n\r\n        <vehicleInfo>\r\n            <brand>Opel</brand>\r\n            <model>Corsa</model>\r\n            <fuel>Gasoline</fuel>\r\n            <transmission>Manual</transmission>\r\n            <year>2008</year>\r\n            <horsePower>80</horsePower>\r\n        </vehicleInfo>\r\n        <typeOfContact>\r\n            <client>\r\n                <name>Ana Ribeiro</name>\r\n                <property>Not Owner</property>\r\n            </client>\r\n        </typeOfContact>\r\n    </reservation>\r\n\r\n\r\n</reservations>",
-					"options": {
-						"raw": {
-							"language": "xml"
-						}
-					}
-				},
 				"url": {
 					"raw": "localhost:8080/add/Reservation",
 					"host": [
@@ -113,13 +104,13 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:8080/Reservationbydate",
+					"raw": "localhost:8080/Expertbydate",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"Reservationbydate"
+						"Expertbydate"
 					]
 				}
 			},
@@ -138,7 +129,7 @@
 					"formdata": [
 						{
 							"key": "expertiseName",
-							"value": "A4S3",
+							"value": "A4S5",
 							"type": "default"
 						},
 						{
@@ -148,7 +139,7 @@
 						},
 						{
 							"key": "type",
-							"value": "not_realized",
+							"value": "realized",
 							"type": "default"
 						}
 					]
@@ -179,7 +170,7 @@
 					"formdata": [
 						{
 							"key": "code",
-							"value": "21",
+							"value": "22",
 							"type": "default"
 						}
 					]
@@ -194,54 +185,6 @@
 						"getDatafromExpertise"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Export_xml (Expertises)",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var responseJson = xml2Json(responseBody);\r",
-							"\r",
-							"console.log(JSON.stringify(responseJson))"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/export_xml/expertises",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"export_xml",
-						"expertises"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Export XML (Reservations)",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
-			"name": "Export XML (Cars)",
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}
