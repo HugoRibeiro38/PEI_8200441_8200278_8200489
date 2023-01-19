@@ -1,0 +1,33 @@
+[
+  {
+    $match: {
+      state: "1",
+    },
+  },
+  {
+    $project: {
+      expert: 1,
+      no: {
+        $size: {
+          $filter: {
+            input: {
+              $objectToArray: "$$ROOT",
+            },
+            as: "field",
+            cond: {
+              $eq: ["$$field.v", "No"],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $group: {
+      _id: "$expert",
+      Not_Conformity: {
+        $sum: "$no",
+      },
+    },
+  },
+]

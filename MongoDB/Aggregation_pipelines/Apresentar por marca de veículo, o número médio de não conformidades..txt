@@ -1,0 +1,83 @@
+[
+  {
+    $match:
+      /**
+       * query: The query in MQL.
+       */
+      {
+        state: "1",
+      },
+  },
+  {
+    $addFields: {
+      nonConformities: {
+        $size: {
+          $filter: {
+            input: {
+              $objectToArray: "$$ROOT",
+            },
+            as: "field",
+            cond: {
+              $eq: ["$$field.v", "No"],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $lookup: {
+      from: "appointments",
+      localField: "appointmentId",
+      foreignField: "appointmentId",
+      as: "appointment",
+    },
+  },
+  {
+    $unwind: "$appointment",
+  },
+  {
+    $lookup: {
+      from: "cars",
+      localField: "appointment.car",
+      foreignField: "_id",
+      as: "car",
+    },
+  },
+  {
+    $unwind: "$car",
+  },
+  {
+    $limit:
+      /**
+       * Provide the number of documents to limit.
+       */
+      100,
+  },
+  {
+    $group: {
+      _id: "$car.brand",
+      avgNonConformities: {
+        $avg: "$nonConformities",
+      },
+    },
+  },
+  // {
+  //   $match:
+  //     /**
+  //      * query: The query in MQL.
+  //      */
+  //     {
+  //       avgNonConformities: {
+  //         $gt: 0,
+  //       },
+  //     },
+  // },
+  {
+    $project: {
+      _id: 0,
+      brand: "$_id",
+      avgNonConformities: "$avgNonConformities",
+    },
+  },
+]

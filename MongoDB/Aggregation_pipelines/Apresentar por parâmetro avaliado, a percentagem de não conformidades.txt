@@ -1,0 +1,83 @@
+[
+  {
+    $match: {
+      state: "1",
+    },
+  },
+  {
+    $project: {
+      fields: {
+        $objectToArray: "$$ROOT",
+      },
+    },
+  },
+  {
+    $unwind: "$fields",
+  },
+  {
+    $match: {
+      "fields.v": "No",
+    },
+  },
+  {
+    $group: {
+      _id: "$fields.k",
+      count: {
+        $sum: 1,
+      },
+    },
+  },
+  {
+    $group: {
+      _id: null,
+      total: {
+        $sum: "$count",
+      },
+      fields: {
+        $push: {
+          k: "$_id",
+          count: "$count",
+        },
+      },
+    },
+  },
+  {
+    $project: {
+      _id: 0,
+      fields: {
+        $map: {
+          input: "$fields",
+          as: "field",
+          in: {
+            k: "$$field.k",
+            percentage: {
+              $multiply: [
+                {
+                  $divide: [
+                    "$$field.count",
+                    "$total",
+                  ],
+                },
+                100,
+              ],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $unwind: "$fields",
+  },
+  {
+    $project:
+      /**
+       * specifications: The fields to
+       *   include or exclude.
+       */
+      {
+        partName: "$fields.k",
+        percentage: "$fields.percentage",
+      },
+  },
+]

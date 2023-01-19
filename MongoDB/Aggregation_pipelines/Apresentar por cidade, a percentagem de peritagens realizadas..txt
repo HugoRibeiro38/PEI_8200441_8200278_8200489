@@ -1,0 +1,59 @@
+[
+  {
+    $lookup: {
+      from: "appointments",
+      localField: "appointmentId",
+      foreignField: "appointmentId",
+      as: "appointment",
+    },
+  },
+  {
+    $unwind: "$appointment",
+  },
+  {
+    $group: {
+      _id: "$appointment.address.city",
+      state1: {
+        $sum: {
+          $cond: [
+            {
+              $eq: ["$state", "1"],
+            },
+            1,
+            0,
+          ],
+        },
+      },
+      state0: {
+        $sum: {
+          $cond: [
+            {
+              $eq: ["$state", "0"],
+            },
+            1,
+            0,
+          ],
+        },
+      },
+    },
+  },
+  {
+    $project: {
+      _id: 0,
+      Expert: "$_id",
+      Percentage: {
+        $multiply: [
+          {
+            $divide: [
+              "$state1",
+              {
+                $sum: ["$state1", "$state0"],
+              },
+            ],
+          },
+          100,
+        ],
+      },
+    },
+  },
+]

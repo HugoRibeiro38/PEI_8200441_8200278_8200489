@@ -1,0 +1,40 @@
+[
+  {
+    $group: {
+      _id: {
+        partner: "$partner",
+        state: "$state",
+      },
+      count: {
+        $sum: 1,
+      },
+    },
+  },
+  {
+    $group: {
+      _id: "$_id.partner",
+      madeInspections: {
+        $sum: {
+          $cond: [
+            {
+              $eq: ["$_id.state", "1"],
+            },
+            "$count",
+            0,
+          ],
+        },
+      },
+      nonMadeInspections: {
+        $sum: {
+          $cond: [
+            {
+              $eq: ["$_id.state", "0"],
+            },
+            "$count",
+            0,
+          ],
+        },
+      },
+    },
+  },
+]

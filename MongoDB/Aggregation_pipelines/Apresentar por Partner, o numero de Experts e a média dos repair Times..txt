@@ -1,0 +1,63 @@
+[
+  {
+    $match:
+      /**
+       * newField: The new field name.
+       * expression: The new field expression.
+       */
+      {
+        state: "1",
+      },
+  },
+  {
+    $addFields: {
+      inspectionEndTime: {
+        $toDate: "$inspectionEndTime",
+      },
+      inspectionStartTime: {
+        $toDate: "$inspectionStartTime",
+      },
+    },
+  },
+  {
+    $addFields: {
+      RepairTime: {
+        $subtract: [
+          "$inspectionEndTime",
+          "$inspectionStartTime",
+        ],
+      },
+    },
+  },
+  {
+    $group: {
+      _id: "$partner",
+      averageRepairTime: {
+        $avg: "$RepairTime",
+      },
+      experts: {
+        $push: "$expert",
+      },
+    },
+  },
+  {
+    $addFields: {
+      averageRepairTime: {
+        $divide: ["$averageRepairTime", 60000],
+      },
+    },
+  },
+  {
+    $project:
+      /**
+       * specifications: The fields to
+       *   include or exclude.
+       */
+      {
+        averageRepairTime: 1,
+        expertCount: {
+          $size: "$experts",
+        },
+      },
+  },
+]

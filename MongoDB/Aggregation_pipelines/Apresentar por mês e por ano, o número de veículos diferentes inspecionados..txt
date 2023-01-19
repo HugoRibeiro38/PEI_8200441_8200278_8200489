@@ -1,0 +1,65 @@
+[
+  {
+    $match: {
+      state: "1",
+    },
+  },
+  {
+    $limit:
+      /**
+       * Provide the number of documents to limit.
+       */
+      500,
+  },
+  {
+    $lookup: {
+      from: "appointments",
+      localField: "appointmentId",
+      foreignField: "appointmentId",
+      as: "appointment",
+    },
+  },
+  {
+    $unwind: "$appointment",
+  },
+  {
+    $project: {
+      year: {
+        $year: {
+          $dateFromString: {
+            dateString: "$inspectionStartTime",
+          },
+        },
+      },
+      month: {
+        $month: {
+          $dateFromString: {
+            dateString: "$inspectionStartTime",
+          },
+        },
+      },
+      carId: "$appointment.car",
+    },
+  },
+  {
+    $group: {
+      _id: {
+        year: "$year",
+        month: "$month",
+      },
+      vehicles: {
+        $addToSet: "$carId",
+      },
+    },
+  },
+  {
+    $project: {
+      _id: 0,
+      year: "$_id.year",
+      month: "$_id.month",
+      vehicles: {
+        $size: "$vehicles",
+      },
+    },
+  },
+]
