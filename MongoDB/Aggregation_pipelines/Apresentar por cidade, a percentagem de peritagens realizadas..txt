@@ -40,7 +40,7 @@
   {
     $project: {
       _id: 0,
-      Expert: "$_id",
+      City: "$_id",
       Percentage: {
         $multiply: [
           {
@@ -55,5 +55,12 @@
         ],
       },
     },
+  },
+  {
+    $out:
+      /**
+       * Provide the name of the output collection.
+       */
+      "Per_City",
   },
 ]

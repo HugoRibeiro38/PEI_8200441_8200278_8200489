@@ -72,12 +72,19 @@
   //         $gt: 0,
   //       },
   //     },
-  // },
+  // }
   {
     $project: {
       _id: 0,
       brand: "$_id",
       avgNonConformities: "$avgNonConformities",
     },
+  },
+  {
+    $out:
+      /**
+       * Provide the name of the output collection.
+       */
+      "Per_CarBrand",
   },
 ]

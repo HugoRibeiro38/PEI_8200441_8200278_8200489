@@ -5,13 +5,6 @@
     },
   },
   {
-    $limit:
-      /**
-       * Provide the number of documents to limit.
-       */
-      500,
-  },
-  {
     $lookup: {
       from: "appointments",
       localField: "appointmentId",
@@ -61,5 +54,12 @@
         $size: "$vehicles",
       },
     },
+  },
+  {
+    $out:
+      /**
+       * Provide the name of the output collection.
+       */
+      "byDate_NCar",
   },
 ]
